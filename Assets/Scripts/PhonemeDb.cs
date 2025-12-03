@@ -115,10 +115,10 @@ public class PhonemeDb : MonoBehaviour
     private PicturePhonemeClass kopOClass;
     public Texture2D sokO;
     private PicturePhonemeClass sokOClass;
-    public Texture2D ost;
-    private PicturePhonemeClass ostClass;
-    public Texture2D otte;
-    private PicturePhonemeClass otteClass;
+    public Texture2D blomst;
+    private PicturePhonemeClass blomstClass;
+    public Texture2D skovO;
+    private PicturePhonemeClass skovOClass;
     public Texture2D boldO;
     private PicturePhonemeClass boldOClass;
 
@@ -146,6 +146,8 @@ public class PhonemeDb : MonoBehaviour
     private PicturePhonemeClass andClass;
     public Texture2D cola;
     private PicturePhonemeClass colaClass;
+    public Texture2D hane;
+    private PicturePhonemeClass haneClass;
 
     // A lyd to
     public Texture2D kar;
@@ -226,8 +228,8 @@ public class PhonemeDb : MonoBehaviour
     private PicturePhonemeClass vinClass;
     public Texture2D ti;
     private PicturePhonemeClass tiClass;
-    public Texture2D nisse; 
-    private PicturePhonemeClass nisseClass;
+    public Texture2D bil; 
+    private PicturePhonemeClass bilClass;
     public Texture2D isbjoern;
     private PicturePhonemeClass isbjoernClass;
     public Texture2D iglo; 
@@ -258,8 +260,6 @@ public class PhonemeDb : MonoBehaviour
     private PicturePhonemeClass loeverClass;
 
     // N lyd 
-    public Texture2D hane;
-    private PicturePhonemeClass haneClass;
     public Texture2D delfin; 
     private PicturePhonemeClass delfinClass;
     public Texture2D kane; 
@@ -330,8 +330,8 @@ public class PhonemeDb : MonoBehaviour
     private PicturePhonemeClass boefClass;
     public Texture2D broed;
     private PicturePhonemeClass broedClass;
-    public Texture2D noegle;
-    private PicturePhonemeClass noegleClass;
+    public Texture2D oekse;
+    private PicturePhonemeClass oekseClass;
     public Texture2D oern;
     private PicturePhonemeClass oernClass;
     public Texture2D oere;
@@ -415,15 +415,15 @@ public class PhonemeDb : MonoBehaviour
         dClass.SetNoOfPos(5);
         dClass.SetVisibleFromTime(3.4);
         dClass.SetPosShiftTime(3.9);
-        dClass.SetPosShiftTime2(6.7);
-        dClass.SetPosShiftTime3(6.9);
-        dClass.SetPosShiftTime4(7.4);
+        dClass.SetPosShiftTime2(9.45);
+        dClass.SetPosShiftTime3(9.87);
+        dClass.SetPosShiftTime4(10.50);
 
         dClass.SetLeftHandPos1(new Vector3(-0.0499f, 1.1752f, -0.7251865f));
         dClass.SetLeftHandPos2(new Vector3(-0.2366f, 1.1868f, -0.7251865f));
-        dClass.SetLeftHandPos3(new Vector3(0.283f, 0.672f, -0.7251865f));
+        dClass.SetLeftHandPos3(new Vector3(0.498f, 0.866f, -0.7251865f));
         dClass.SetLeftHandPos4(new Vector3(0.149f, 1.376f, -0.7251865f));
-        dClass.SetLeftHandPos5(new Vector3(-0.182f, 0.768f, -0.7251865f));
+        dClass.SetLeftHandPos5(new Vector3(-0.203f, 0.866f, -0.7251865f));
 
 
         dClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
@@ -434,9 +434,9 @@ public class PhonemeDb : MonoBehaviour
 
         dClass.SetRightHandPos1(new Vector3(-0.0277f, 1.1563f, -0.7251865f));
         dClass.SetRightHandPos2(new Vector3(-0.2367f, 1.1867f, -0.7251865f));
-        dClass.SetRightHandPos3(new Vector3(0.226f, 0.784f, -0.7242f));
+        dClass.SetRightHandPos3(new Vector3(0.222f, 0.866f, -0.7242f));
         dClass.SetRightHandPos4(new Vector3(-0.149f, 1.376f, -0.7242f));
-        dClass.SetRightHandPos5(new Vector3(-0.451f, 0.773f, -0.7242f));
+        dClass.SetRightHandPos5(new Vector3(-0.475f, 0.866f, -0.7242f));
 
 
         dClass.SetRightHandAngle1(new Vector3(0f, 0f, 90f));
@@ -594,7 +594,7 @@ public class PhonemeDb : MonoBehaviour
         mClass.SetPosShiftTime3(3.9);
         mClass.SetPosShiftTime4(4.2);
 
-        mClass.SetRightHandPos1(new Vector3(0.087f, 0.755f, -0.7251865f));
+        mClass.SetRightHandPos1(new Vector3(0.087f, 0.842f, -0.7251865f));
         mClass.SetRightHandPos2(new Vector3(0.143f, 1.031f, -0.7242f));
         mClass.SetRightHandPos3(new Vector3(-0.006f, 1.153f, -0.7242f));
         mClass.SetRightHandPos4(new Vector3(-0.127f, 0.965f, -0.7251865f));
@@ -707,9 +707,9 @@ public class PhonemeDb : MonoBehaviour
         sClass.SetLeftHandPos2(new Vector3(0.0f, -0.5f, 0.0f));
         sClass.SetLeftHandPos3(new Vector3(0.0f, -0.5f, 0.0f));
 
-        sClass.SetRightHandPos1(new Vector3(-0.3841f, 1.2778f, -0.7251865f));
+        sClass.SetRightHandPos1(new Vector3(-0.379f, 1.371f, -0.7251865f));
         sClass.SetRightHandPos2(new Vector3(0.174f, 0.9739f, -0.72518f));
-        sClass.SetRightHandPos3(new Vector3(0.4713f, 1.154f, -0.7251865f));
+        sClass.SetRightHandPos3(new Vector3(0.4f, 1.154f, -0.7251865f));
 
         sClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
         sClass.SetLeftHandAngle2(new Vector3(0f, 0f, 90));
@@ -759,7 +759,7 @@ public class PhonemeDb : MonoBehaviour
         uLyd1Class.SetPosShiftTime3(3.93);
 
         uLyd1Class.SetLeftHandPos1(new Vector3(0.095f, 0.803f, -0.7251865f));
-        uLyd1Class.SetLeftHandPos2(new Vector3(0.259f, 0.584f, -0.7251865f));
+        uLyd1Class.SetLeftHandPos2(new Vector3(0.259f, 0.686f, -0.7251865f));
         uLyd1Class.SetLeftHandPos3(new Vector3(0.548f, 0.916f, -0.7251865f));
         uLyd1Class.SetLeftHandPos4(new Vector3(0.433f, 1.391f, -0.7251865f));
 
@@ -769,7 +769,7 @@ public class PhonemeDb : MonoBehaviour
         uLyd1Class.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
         uLyd1Class.SetRightHandPos1(new Vector3(0.016f, 0.802f, -0.725f));
-        uLyd1Class.SetRightHandPos2(new Vector3(-0.16f, 0.589f, -0.725f));
+        uLyd1Class.SetRightHandPos2(new Vector3(-0.16f, 0.686f, -0.725f));
         uLyd1Class.SetRightHandPos3(new Vector3(-0.411f, 0.908f, -0.724f));
         uLyd1Class.SetRightHandPos4(new Vector3(-0.332f, 1.394f, -0.724f));
 
@@ -825,13 +825,13 @@ public class PhonemeDb : MonoBehaviour
         vLyd1Class.SetPosShiftTime(2.92);
 
         vLyd1Class.SetLeftHandPos1(new Vector3(0.433f, 1.391f, -0.7251865f));
-        vLyd1Class.SetLeftHandPos2(new Vector3(0.111f, 0.653f, -0.7251865f));
+        vLyd1Class.SetLeftHandPos2(new Vector3(0.057f, 0.818f, -0.7251865f));
 
         vLyd1Class.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         vLyd1Class.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
 
         vLyd1Class.SetRightHandPos1(new Vector3(-0.332f, 1.394f, -0.725f));
-        vLyd1Class.SetRightHandPos2(new Vector3(0.024f, 0.655f, -0.725f));
+        vLyd1Class.SetRightHandPos2(new Vector3(-0.03f, 0.82f, -0.725f));
 
         vLyd1Class.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         vLyd1Class.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -850,25 +850,25 @@ public class PhonemeDb : MonoBehaviour
         vLyd2Class.SetPosShiftTime2(2.76);
         vLyd2Class.SetPosShiftTime3(3.28);
 
-        vLyd2Class.SetLeftHandPos1(new Vector3(0.095f, 0.803f, -0.7251865f));
-        vLyd2Class.SetLeftHandPos2(new Vector3(0.259f, 0.584f, -0.7251865f));
-        vLyd2Class.SetLeftHandPos3(new Vector3(0.548f, 0.916f, -0.7251865f));
-        vLyd2Class.SetLeftHandPos4(new Vector3(0.433f, 1.391f, -0.7251865f));
+        vLyd2Class.SetLeftHandPos1(uLyd1Class.GetLeftHandpos1());
+        vLyd2Class.SetLeftHandPos2(uLyd1Class.GetLeftHandpos2());
+        vLyd2Class.SetLeftHandPos3(uLyd1Class.GetLeftHandpos3());
+        vLyd2Class.SetLeftHandPos4(uLyd1Class.GetLeftHandpos4());
 
-        vLyd2Class.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
+        vLyd2Class.SetLeftHandAngle1(uLyd1Class.GetLeftHandAngle1());
+        vLyd2Class.SetLeftHandAngle2(uLyd1Class.GetLeftHandAngle2());
+        vLyd2Class.SetLeftHandAngle3(uLyd1Class.GetLeftHandAngle3());
+        vLyd2Class.SetLeftHandAngle4(uLyd1Class.GetLeftHandAngle4());
 
-        vLyd2Class.SetRightHandPos1(new Vector3(0.016f, 0.802f, -0.725f));
-        vLyd2Class.SetRightHandPos2(new Vector3(-0.16f, 0.589f, -0.725f));
-        vLyd2Class.SetRightHandPos3(new Vector3(-0.411f, 0.908f, -0.724f));
-        vLyd2Class.SetRightHandPos4(new Vector3(-0.332f, 1.394f, -0.724f));
+        vLyd2Class.SetRightHandPos1(uLyd1Class.GetRightHandpos1());
+        vLyd2Class.SetRightHandPos2(uLyd1Class.GetRightHandpos2());
+        vLyd2Class.SetRightHandPos3(uLyd1Class.GetRightHandpos3());
+        vLyd2Class.SetRightHandPos4(uLyd1Class.GetRightHandpos4());
 
-        vLyd2Class.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetRightHandAngle3(new Vector3(0f, 0f, 0f));
-        vLyd2Class.SetRightHandAngle4(new Vector3(0f, 0f, 0f));
+        vLyd2Class.SetRightHandAngle1(uLyd1Class.GetRightHandAngle1());
+        vLyd2Class.SetRightHandAngle2(uLyd1Class.GetRightHandAngle2());
+        vLyd2Class.SetRightHandAngle3(uLyd1Class.GetRightHandAngle3());
+        vLyd2Class.SetRightHandAngle4(uLyd1Class.GetRightHandAngle4());
 
         // MANGLER Y
         yClass = new PhonemeVideoClass(y);
@@ -1077,7 +1077,7 @@ public class PhonemeDb : MonoBehaviour
 
         kageAClass = new PicturePhonemeClass(kageA);
         kageAClass.SetImageName("kage");
-        kageAClass.SetAssignment("Hvad er den første vokal i ordett");
+        kageAClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         kageAClass.SetAssignmentLetter("a");
         kageAClass.SetNoOfPos(1);
         kageAClass.SetEnableLeftHand(true);
@@ -1101,6 +1101,19 @@ public class PhonemeDb : MonoBehaviour
         hatAClass.SetLeftHandAngle1(aClass.GetLeftHandAngle1());
         hatAClass.SetLeftHandPos1(aClass.GetLeftHandpos1());
 
+        haneClass = new PicturePhonemeClass(hane);
+        haneClass.SetImageName("hane");
+        haneClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
+        haneClass.SetAssignmentLetter("a");
+        haneClass.SetNoOfPos(1);
+        haneClass.SetEnableLeftHand(true);
+        haneClass.SetEnableRightHand(true);
+        haneClass.SetPos1ReadyToHit(true);
+        haneClass.SetRightHandAngle1(aClass.GetRightHandAngle1());
+        haneClass.SetRightHandPos1(aClass.GetRightHandpos1());
+        haneClass.SetLeftHandAngle1(aClass.GetLeftHandAngle1());
+        haneClass.SetLeftHandPos1(aClass.GetLeftHandpos1());
+
         colaClass = new PicturePhonemeClass(cola);
         colaClass.SetImageName("cola");
         colaClass.SetAssignment("Hvad er den sidste lyd i ordet");
@@ -1117,7 +1130,7 @@ public class PhonemeDb : MonoBehaviour
         //a Lyd to
         bamseClass = new PicturePhonemeClass(bamse);
         bamseClass.SetImageName("bamse");
-        bamseClass.SetAssignment("Hvad er den anden lyd i ordet");
+        bamseClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         bamseClass.SetAssignmentLetter("a");
         bamseClass.SetNoOfPos(1);
         bamseClass.SetEnableLeftHand(true);
@@ -1130,7 +1143,7 @@ public class PhonemeDb : MonoBehaviour
 
         karClass = new PicturePhonemeClass(kar);
         karClass.SetImageName("har");
-        karClass.SetAssignment("Hvad er den midterste lyd");
+        karClass.SetAssignment("Hvad er den midterste lyd i ordet");
         karClass.SetAssignmentLetter("a");
         karClass.SetNoOfPos(1);
         karClass.SetEnableLeftHand(true);
@@ -1143,7 +1156,7 @@ public class PhonemeDb : MonoBehaviour
 
         markClass = new PicturePhonemeClass(mark);
         markClass.SetImageName("mark");
-        markClass.SetAssignment("Hvad er den midterste lyd");
+        markClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         markClass.SetAssignmentLetter("a");
         markClass.SetNoOfPos(1);
         markClass.SetEnableLeftHand(true);
@@ -1156,7 +1169,7 @@ public class PhonemeDb : MonoBehaviour
 
         kaffeClass = new PicturePhonemeClass(kaffe);
         kaffeClass.SetImageName("kaffe");
-        kaffeClass.SetAssignment("Hvad er den første vokal lyd");
+        kaffeClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         kaffeClass.SetAssignmentLetter("a");
         kaffeClass.SetNoOfPos(1);
         kaffeClass.SetEnableLeftHand(true);
@@ -1169,7 +1182,7 @@ public class PhonemeDb : MonoBehaviour
 
         hareClass = new PicturePhonemeClass(hare);
         hareClass.SetImageName("hare");
-        hareClass.SetAssignment("Hvad er den første vokal lyd");
+        hareClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         hareClass.SetAssignmentLetter("a");
         hareClass.SetNoOfPos(1);
         hareClass.SetEnableLeftHand(true);
@@ -1182,7 +1195,7 @@ public class PhonemeDb : MonoBehaviour
 
         girafClass = new PicturePhonemeClass(giraf);
         girafClass.SetImageName("giraf");
-        girafClass.SetAssignment("Hvad er den sidste vokal lyd");
+        girafClass.SetAssignment("Hvad er den sidste vokal-lyd i ordet");
         girafClass.SetAssignmentLetter("a");
         girafClass.SetNoOfPos(1);
         girafClass.SetEnableLeftHand(true);
@@ -1354,7 +1367,7 @@ public class PhonemeDb : MonoBehaviour
 
         kaedeClass = new PicturePhonemeClass(kaede);
         kaedeClass.SetImageName("kaede");
-        kaedeClass.SetAssignment("Hvad er den sidste konsonant i ordet");
+        kaedeClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         kaedeClass.SetAssignmentLetter("d");
         kaedeClass.SetNoOfPos(3);
         kaedeClass.SetEnableLeftHand(true);
@@ -1377,7 +1390,7 @@ public class PhonemeDb : MonoBehaviour
 
         ladeClass = new PicturePhonemeClass(lade);
         ladeClass.SetImageName("lade");
-        ladeClass.SetAssignment("Hvad er den sidste konsonant i ordet");
+        ladeClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         ladeClass.SetAssignmentLetter("d");
         ladeClass.SetNoOfPos(3);
         ladeClass.SetEnableLeftHand(true);
@@ -1414,7 +1427,7 @@ public class PhonemeDb : MonoBehaviour
         // e lyd to 
         femClass = new PicturePhonemeClass(fem);
         femClass.SetImageName("fem");
-        femClass.SetAssignment("Hvad er den midterste lyd");
+        femClass.SetAssignment("Hvad er den midterste lyd i ordet");
         femClass.SetAssignmentLetter("e");
         femClass.SetNoOfPos(1);
         femClass.SetEnableRightHand(true);
@@ -1428,7 +1441,7 @@ public class PhonemeDb : MonoBehaviour
         // e lyd to 
         vestClass = new PicturePhonemeClass(vest);
         vestClass.SetImageName("vest");
-        vestClass.SetAssignment("Hvad er den første vokal lyd");
+        vestClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         vestClass.SetAssignmentLetter("e");
         vestClass.SetNoOfPos(1);
         vestClass.SetEnableRightHand(true);
@@ -1442,7 +1455,7 @@ public class PhonemeDb : MonoBehaviour
         // e lyd tre
         daaseClass = new PicturePhonemeClass(daase);
         daaseClass.SetImageName("daase");
-        daaseClass.SetAssignment("Hvad er den sidste lyd");
+        daaseClass.SetAssignment("Hvad er den sidste lyd i ordet");
         daaseClass.SetAssignmentLetter("e");
         daaseClass.SetNoOfPos(1);
         daaseClass.SetEnableRightHand(true);
@@ -1456,7 +1469,7 @@ public class PhonemeDb : MonoBehaviour
         // e lyd tre
         aebleClass = new PicturePhonemeClass(aeble);
         aebleClass.SetImageName("æble");
-        aebleClass.SetAssignment("Hvad er den sidste lyd");
+        aebleClass.SetAssignment("Hvad er den sidste lyd i ordet");
         aebleClass.SetAssignmentLetter("e");
         aebleClass.SetNoOfPos(1);
         aebleClass.SetEnableRightHand(true);
@@ -1597,28 +1610,28 @@ public class PhonemeDb : MonoBehaviour
         tiClass.SetRightHandAngle2(iClass.GetRightHandAngle2());
         tiClass.SetRightHandAngle3(iClass.GetRightHandAngle3());
 
-        nisseClass = new PicturePhonemeClass(nisse);
-        nisseClass.SetImageName("nisse");
-        nisseClass.SetAssignment("Hvad er den første vokal lyd i ordet");
-        nisseClass.SetAssignmentLetter("i");
-        nisseClass.SetNoOfPos(3);
-        nisseClass.SetEnableRightHand(true);
-        nisseClass.SetEnableLeftHand(true);
-        nisseClass.SetPos1ReadyToHit(true);
-        nisseClass.SetPos2ReadyToHit(true);
-        nisseClass.SetPos3ReadyToHit(true);
-        nisseClass.SetLeftHandPos1(iClass.GetLeftHandpos1());
-        nisseClass.SetLeftHandPos2(iClass.GetLeftHandpos2());
-        nisseClass.SetLeftHandPos3(iClass.GetLeftHandpos3());
-        nisseClass.SetLeftHandAngle1(iClass.GetLeftHandAngle1());
-        nisseClass.SetLeftHandAngle2(iClass.GetLeftHandAngle2());
-        nisseClass.SetLeftHandAngle3(iClass.GetLeftHandAngle3());
-        nisseClass.SetRightHandPos1(iClass.GetRightHandpos1());
-        nisseClass.SetRightHandPos2(iClass.GetRightHandpos2());
-        nisseClass.SetRightHandPos3(iClass.GetRightHandpos3());
-        nisseClass.SetRightHandAngle1(iClass.GetRightHandAngle1());
-        nisseClass.SetRightHandAngle2(iClass.GetRightHandAngle2());
-        nisseClass.SetRightHandAngle3(iClass.GetRightHandAngle3());
+        bilClass = new PicturePhonemeClass(bil);
+        bilClass.SetImageName("bil");
+        bilClass.SetAssignment("Hvad er den midterste lyd i ordet");
+        bilClass.SetAssignmentLetter("i");
+        bilClass.SetNoOfPos(3);
+        bilClass.SetEnableRightHand(true);
+        bilClass.SetEnableLeftHand(true);
+        bilClass.SetPos1ReadyToHit(true);
+        bilClass.SetPos2ReadyToHit(true);
+        bilClass.SetPos3ReadyToHit(true);
+        bilClass.SetLeftHandPos1(iClass.GetLeftHandpos1());
+        bilClass.SetLeftHandPos2(iClass.GetLeftHandpos2());
+        bilClass.SetLeftHandPos3(iClass.GetLeftHandpos3());
+        bilClass.SetLeftHandAngle1(iClass.GetLeftHandAngle1());
+        bilClass.SetLeftHandAngle2(iClass.GetLeftHandAngle2());
+        bilClass.SetLeftHandAngle3(iClass.GetLeftHandAngle3());
+        bilClass.SetRightHandPos1(iClass.GetRightHandpos1());
+        bilClass.SetRightHandPos2(iClass.GetRightHandpos2());
+        bilClass.SetRightHandPos3(iClass.GetRightHandpos3());
+        bilClass.SetRightHandAngle1(iClass.GetRightHandAngle1());
+        bilClass.SetRightHandAngle2(iClass.GetRightHandAngle2());
+        bilClass.SetRightHandAngle3(iClass.GetRightHandAngle3());
 
         isbjoernClass = new PicturePhonemeClass(isbjoern);
         isbjoernClass.SetImageName("isbjoern");
@@ -1668,7 +1681,7 @@ public class PhonemeDb : MonoBehaviour
 
         girafIClass = new PicturePhonemeClass(girafI);
         girafIClass.SetImageName("giraf");
-        girafIClass.SetAssignment("Hvad er den første vokal lyd i ordet");
+        girafIClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         girafIClass.SetAssignmentLetter("i");
         girafIClass.SetNoOfPos(3);
         girafIClass.SetEnableRightHand(true);
@@ -1693,7 +1706,7 @@ public class PhonemeDb : MonoBehaviour
         // k lyd 
         kageKClass = new PicturePhonemeClass(kageK);
         kageKClass.SetImageName("kage");
-        kageKClass.SetAssignment("Hvad er den første lyd");
+        kageKClass.SetAssignment("Hvad er den første lyd i ordet");
         kageKClass.SetAssignmentLetter("k");
         kageKClass.SetNoOfPos(2);
         kageKClass.SetEnableLeftHand(true);
@@ -1711,7 +1724,7 @@ public class PhonemeDb : MonoBehaviour
 
         kopKClass = new PicturePhonemeClass(kopK);
         kopKClass.SetImageName("kop");
-        kopKClass.SetAssignment("Hvad er den første lyd");
+        kopKClass.SetAssignment("Hvad er den første lyd i ordet");
         kopKClass.SetAssignmentLetter("k");
         kopKClass.SetNoOfPos(2);
         kopKClass.SetEnableLeftHand(true);
@@ -1729,7 +1742,7 @@ public class PhonemeDb : MonoBehaviour
 
         sokKClass = new PicturePhonemeClass(sokK);
         sokKClass.SetImageName("sok");
-        sokKClass.SetAssignment("Hvad er den sidste lyd");
+        sokKClass.SetAssignment("Hvad er den sidste lyd i ordet");
         sokKClass.SetAssignmentLetter("k");
         sokKClass.SetNoOfPos(2);
         sokKClass.SetEnableLeftHand(true);
@@ -1747,7 +1760,7 @@ public class PhonemeDb : MonoBehaviour
 
         koKClass = new PicturePhonemeClass(koK);
         koKClass.SetImageName("ko");
-        koKClass.SetAssignment("Hvad er den første lyd");
+        koKClass.SetAssignment("Hvad er den første lyd i ordet");
         koKClass.SetAssignmentLetter("k");
         koKClass.SetNoOfPos(2);
         koKClass.SetEnableLeftHand(true);
@@ -1765,7 +1778,7 @@ public class PhonemeDb : MonoBehaviour
 
         skoKClass = new PicturePhonemeClass(skoK);
         skoKClass.SetImageName("sko");
-        skoKClass.SetAssignment("Hvad er den midterste lyd");
+        skoKClass.SetAssignment("Hvad er den midterste lyd i ordet");
         skoKClass.SetAssignmentLetter("k");
         skoKClass.SetNoOfPos(2);
         skoKClass.SetEnableLeftHand(true);
@@ -1784,7 +1797,7 @@ public class PhonemeDb : MonoBehaviour
         // l lyd et 
         laasClass = new PicturePhonemeClass(laas);
         laasClass.SetImageName("laas");
-        laasClass.SetAssignment("Hvad er den første lyd");
+        laasClass.SetAssignment("Hvad er den første ly i ordetd");
         laasClass.SetAssignmentLetter("l");
         laasClass.SetNoOfPos(3);
         laasClass.SetEnableRightHand(true);
@@ -1808,7 +1821,7 @@ public class PhonemeDb : MonoBehaviour
         // l lyd et 
         leClass = new PicturePhonemeClass(le);
         leClass.SetImageName("le");
-        leClass.SetAssignment("Hvad er den første lyd");
+        leClass.SetAssignment("Hvad er den første lyd i ordet");
         leClass.SetAssignmentLetter("l");
         leClass.SetNoOfPos(3);
         leClass.SetEnableRightHand(true);
@@ -1832,7 +1845,7 @@ public class PhonemeDb : MonoBehaviour
         //m lyd 
         musClass = new PicturePhonemeClass(mus);
         musClass.SetImageName("mus");
-        musClass.SetAssignment("Hvad er den første lyd");
+        musClass.SetAssignment("Hvad er den første lyd i ordet");
         musClass.SetAssignmentLetter("m");
         musClass.SetNoOfPos(5);
         musClass.SetEnableRightHand(true);
@@ -1856,7 +1869,7 @@ public class PhonemeDb : MonoBehaviour
 
         murMClass = new PicturePhonemeClass(murM);
         musClass.SetImageName("mus");
-        musClass.SetAssignment("Hvad er den første lyd");
+        musClass.SetAssignment("Hvad er den første lyd i ordet");
         musClass.SetAssignmentLetter("m");
         musClass.SetNoOfPos(5);
         musClass.SetEnableRightHand(true);
@@ -1880,7 +1893,7 @@ public class PhonemeDb : MonoBehaviour
 
         femClass = new PicturePhonemeClass(fem);
         femClass.SetImageName("fem");
-        femClass.SetAssignment("Hvad er den sidste lyd");
+        femClass.SetAssignment("Hvad er den sidste lyd i ordet");
         femClass.SetAssignmentLetter("m");
         femClass.SetNoOfPos(5);
         femClass.SetEnableRightHand(true);
@@ -1904,7 +1917,7 @@ public class PhonemeDb : MonoBehaviour
 
         kamClass = new PicturePhonemeClass(kam);
         kamClass.SetImageName("kam");
-        kamClass.SetAssignment("Hvad er den sidste lyd");
+        kamClass.SetAssignment("Hvad er den sidste lyd i ordet");
         kamClass.SetAssignmentLetter("m");
         kamClass.SetNoOfPos(5);
         kamClass.SetEnableRightHand(true);
@@ -1928,7 +1941,7 @@ public class PhonemeDb : MonoBehaviour
 
         kamelClass = new PicturePhonemeClass(kamel);
         kamelClass.SetImageName("kam");
-        kamelClass.SetAssignment("Hvad er den midterste lyd");
+        kamelClass.SetAssignment("Hvad er den midterste lyd i ordet");
         kamelClass.SetAssignmentLetter("m");
         kamelClass.SetNoOfPos(5);
         kamelClass.SetEnableRightHand(true);
@@ -1951,19 +1964,10 @@ public class PhonemeDb : MonoBehaviour
         kamelClass.SetRightHandAngle5(mClass.GetRightHandAngle5());
 
         //n lyd
-        haneClass = new PicturePhonemeClass(hane);
-        haneClass.SetImageName("hane");
-        haneClass.SetAssignment("Hvad er den sidste konsonant lyd");
-        haneClass.SetAssignmentLetter("n");
-        haneClass.SetNoOfPos(1);
-        haneClass.SetEnableRightHand(true);
-        haneClass.SetPos1ReadyToHit(true);
-        haneClass.SetRightHandPos1(nClass.GetRightHandpos1());
-        haneClass.SetRightHandAngle1(nClass.GetRightHandAngle1());
 
         delfinClass = new PicturePhonemeClass(delfin);
         delfinClass.SetImageName("delfin");
-        delfinClass.SetAssignment("Hvad er den sidste lyd");
+        delfinClass.SetAssignment("Hvad er den sidste lyd i ordet");
         delfinClass.SetAssignmentLetter("n");
         delfinClass.SetNoOfPos(1);
         delfinClass.SetEnableRightHand(true);
@@ -1973,7 +1977,7 @@ public class PhonemeDb : MonoBehaviour
 
         kaneClass = new PicturePhonemeClass(kane);
         kaneClass.SetImageName("kane");
-        kaneClass.SetAssignment("Hvad er den sidste konsonant lyd");
+        kaneClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         kaneClass.SetAssignmentLetter("n");
         kaneClass.SetNoOfPos(1);
         kaneClass.SetEnableRightHand(true);
@@ -1983,7 +1987,7 @@ public class PhonemeDb : MonoBehaviour
 
         naaleClass = new PicturePhonemeClass(naale);
         naaleClass.SetImageName("naale");
-        naaleClass.SetAssignment("Hvad er den første lyd");
+        naaleClass.SetAssignment("Hvad er den første lyd i ordet");
         naaleClass.SetAssignmentLetter("n");
         naaleClass.SetNoOfPos(1);
         naaleClass.SetEnableRightHand(true);
@@ -1993,7 +1997,7 @@ public class PhonemeDb : MonoBehaviour
 
         netClass = new PicturePhonemeClass(net);
         netClass.SetImageName("net");
-        netClass.SetAssignment("Hvad er den første lyd");
+        netClass.SetAssignment("Hvad er den første lyd i ordet");
         netClass.SetAssignmentLetter("n");
         netClass.SetNoOfPos(1);
         netClass.SetEnableRightHand(true);
@@ -2004,7 +2008,7 @@ public class PhonemeDb : MonoBehaviour
         //o lyd et 
         ormClass = new PicturePhonemeClass(orm);
         ormClass.SetImageName("orm");
-        ormClass.SetAssignment("Hvad er den første lyd");
+        ormClass.SetAssignment("Hvad er den første lyd i ordet");
         ormClass.SetAssignmentLetter("o");
         ormClass.SetNoOfPos(3);
         ormClass.SetEnableLeftHand(true);
@@ -2027,7 +2031,7 @@ public class PhonemeDb : MonoBehaviour
 
         skoOClass = new PicturePhonemeClass(skoO);
         skoOClass.SetImageName("sko");
-        skoOClass.SetAssignment("Hvad er den sidste lyd");
+        skoOClass.SetAssignment("Hvad er den sidste lyd i ordet");
         skoOClass.SetAssignmentLetter("o");
         skoOClass.SetNoOfPos(3);
         skoOClass.SetEnableLeftHand(true);
@@ -2050,7 +2054,7 @@ public class PhonemeDb : MonoBehaviour
 
         koOClass = new PicturePhonemeClass(koO);
         koOClass.SetImageName("ko");
-        koOClass.SetAssignment("Hvad er den sidste lyd");
+        koOClass.SetAssignment("Hvad er den sidste lyd i ordet");
         koOClass.SetAssignmentLetter("o");
         koOClass.SetNoOfPos(3);
         koOClass.SetEnableLeftHand(true);
@@ -2073,7 +2077,7 @@ public class PhonemeDb : MonoBehaviour
 
         solClass = new PicturePhonemeClass(sol);
         solClass.SetImageName("sol");
-        solClass.SetAssignment("Hvad er den midterste lyd");
+        solClass.SetAssignment("Hvad er den midterste lyd i ordet");
         solClass.SetAssignmentLetter("o");
         solClass.SetNoOfPos(3);
         solClass.SetEnableLeftHand(true);
@@ -2096,7 +2100,7 @@ public class PhonemeDb : MonoBehaviour
 
         toClass = new PicturePhonemeClass(to);
         toClass.SetImageName("to");
-        toClass.SetAssignment("Hvad er den sidste lyd");
+        toClass.SetAssignment("Hvad er den sidste lyd i ordet");
         toClass.SetAssignmentLetter("o");
         toClass.SetNoOfPos(3);
         toClass.SetEnableLeftHand(true);
@@ -2119,7 +2123,7 @@ public class PhonemeDb : MonoBehaviour
 
         kanoClass = new PicturePhonemeClass(kano);
         kanoClass.SetImageName("kano");
-        kanoClass.SetAssignment("Hvad er den sidste lyd");
+        kanoClass.SetAssignment("Hvad er den sidste lyd i ordet");
         kanoClass.SetAssignmentLetter("o");
         kanoClass.SetNoOfPos(3);
         kanoClass.SetEnableLeftHand(true);
@@ -2144,7 +2148,7 @@ public class PhonemeDb : MonoBehaviour
         //o lyd to
         stopClass = new PicturePhonemeClass(stop);
         stopClass.SetImageName("stop");
-        stopClass.SetAssignment("Hvad er den første vokal lyd");
+        stopClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         stopClass.SetAssignmentLetter("o");
         stopClass.SetNoOfPos(1);
         stopClass.SetEnableLeftHand(true);
@@ -2157,7 +2161,7 @@ public class PhonemeDb : MonoBehaviour
 
         kopOClass = new PicturePhonemeClass(kopO);
         kopOClass.SetImageName("kop");
-        kopOClass.SetAssignment("Hvad er den midterste lyd");
+        kopOClass.SetAssignment("Hvad er den midterste lyd i ordet");
         kopOClass.SetAssignmentLetter("o");
         kopOClass.SetNoOfPos(1);
         kopOClass.SetEnableLeftHand(true);
@@ -2170,7 +2174,7 @@ public class PhonemeDb : MonoBehaviour
 
         sokOClass = new PicturePhonemeClass(sokO);
         sokOClass.SetImageName("sok");
-        sokOClass.SetAssignment("Hvad er den midterste lyd");
+        sokOClass.SetAssignment("Hvad er den midterste lyd i ordet");
         sokOClass.SetAssignmentLetter("o");
         sokOClass.SetNoOfPos(1);
         sokOClass.SetEnableLeftHand(true);
@@ -2181,35 +2185,35 @@ public class PhonemeDb : MonoBehaviour
         sokOClass.SetLeftHandAngle1(oClass.GetLeftHandAngle4());
         sokOClass.SetRightHandAngle1(oClass.GetRightHandAngle4());
 
-        ostClass = new PicturePhonemeClass(ost);
-        ostClass.SetImageName("ost");
-        ostClass.SetAssignment("Hvad er den første lyd");
-        ostClass.SetAssignmentLetter("o");
-        ostClass.SetNoOfPos(1);
-        ostClass.SetEnableLeftHand(true);
-        ostClass.SetEnableRightHand(true);
-        ostClass.SetPos1ReadyToHit(true);
-        ostClass.SetLeftHandPos1(oClass.GetLeftHandpos4());
-        ostClass.SetRightHandPos1(oClass.GetRightHandpos4());
-        ostClass.SetLeftHandAngle1(oClass.GetLeftHandAngle4());
-        ostClass.SetRightHandAngle1(oClass.GetRightHandAngle4());
+        blomstClass = new PicturePhonemeClass(blomst);
+        blomstClass.SetImageName("blomst");
+        blomstClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
+        blomstClass.SetAssignmentLetter("o");
+        blomstClass.SetNoOfPos(1);
+        blomstClass.SetEnableLeftHand(true);
+        blomstClass.SetEnableRightHand(true);
+        blomstClass.SetPos1ReadyToHit(true);
+        blomstClass.SetLeftHandPos1(oClass.GetLeftHandpos4());
+        blomstClass.SetRightHandPos1(oClass.GetRightHandpos4());
+        blomstClass.SetLeftHandAngle1(oClass.GetLeftHandAngle4());
+        blomstClass.SetRightHandAngle1(oClass.GetRightHandAngle4());
 
-        otteClass = new PicturePhonemeClass(otte);
-        otteClass.SetImageName("otte");
-        otteClass.SetAssignment("Hvad er den første lyd");
-        otteClass.SetAssignmentLetter("o");
-        otteClass.SetNoOfPos(1);
-        otteClass.SetEnableLeftHand(true);
-        otteClass.SetEnableRightHand(true);
-        otteClass.SetPos1ReadyToHit(true);
-        otteClass.SetLeftHandPos1(oClass.GetLeftHandpos4());
-        otteClass.SetRightHandPos1(oClass.GetRightHandpos4());
-        otteClass.SetLeftHandAngle1(oClass.GetLeftHandAngle4());
-        otteClass.SetRightHandAngle1(oClass.GetRightHandAngle4());
+        skovOClass = new PicturePhonemeClass(skovO);
+        skovOClass.SetImageName("skov");
+        skovOClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
+        skovOClass.SetAssignmentLetter("o");
+        skovOClass.SetNoOfPos(1);
+        skovOClass.SetEnableLeftHand(true);
+        skovOClass.SetEnableRightHand(true);
+        skovOClass.SetPos1ReadyToHit(true);
+        skovOClass.SetLeftHandPos1(oClass.GetLeftHandpos4());
+        skovOClass.SetRightHandPos1(oClass.GetRightHandpos4());
+        skovOClass.SetLeftHandAngle1(oClass.GetLeftHandAngle4());
+        skovOClass.SetRightHandAngle1(oClass.GetRightHandAngle4());
 
         boldOClass = new PicturePhonemeClass(boldD);
         boldOClass.SetImageName("bold");
-        boldOClass.SetAssignment("Hvad er den første vokal lyd");
+        boldOClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         boldOClass.SetAssignmentLetter("o");
         boldOClass.SetNoOfPos(1);
         boldOClass.SetEnableLeftHand(true);
@@ -2224,7 +2228,7 @@ public class PhonemeDb : MonoBehaviour
 
         girafRClass = new PicturePhonemeClass(girafR);
         girafRClass.SetImageName("giraf");
-        girafRClass.SetAssignment("Hvad er den midterste lyd");
+        girafRClass.SetAssignment("Hvad er den midterste lyd i ordet");
         girafRClass.SetAssignmentLetter("r");
         girafRClass.SetNoOfPos(2);
         girafRClass.SetEnableLeftHand(true);
@@ -2242,7 +2246,7 @@ public class PhonemeDb : MonoBehaviour
 
         hareRClass = new PicturePhonemeClass(hareR);
         hareRClass.SetImageName("hare");
-        hareRClass.SetAssignment("Hvad er den sidste konsonant lyd");
+        hareRClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         hareRClass.SetAssignmentLetter("r");
         hareRClass.SetNoOfPos(2);
         hareRClass.SetEnableLeftHand(true);
@@ -2260,7 +2264,7 @@ public class PhonemeDb : MonoBehaviour
 
         oereRClass = new PicturePhonemeClass(oereR);
         oereRClass.SetImageName("oere");
-        oereRClass.SetAssignment("Hvad er den midterste lyd");
+        oereRClass.SetAssignment("Hvad er den midterste lyd i ordet");
         oereRClass.SetAssignmentLetter("r");
         oereRClass.SetNoOfPos(2);
         oereRClass.SetEnableLeftHand(true);
@@ -2278,7 +2282,7 @@ public class PhonemeDb : MonoBehaviour
 
         raketClass = new PicturePhonemeClass(raket);
         raketClass.SetImageName("raket");
-        raketClass.SetAssignment("Hvad er den første lyd");
+        raketClass.SetAssignment("Hvad er den første lyd i ordet");
         raketClass.SetAssignmentLetter("r");
         raketClass.SetNoOfPos(2);
         raketClass.SetEnableLeftHand(true);
@@ -2296,7 +2300,7 @@ public class PhonemeDb : MonoBehaviour
 
         roseClass = new PicturePhonemeClass(rose);
         roseClass.SetImageName("rose");
-        roseClass.SetAssignment("Hvad er den første lyd");
+        roseClass.SetAssignment("Hvad er den første lyd i ordet");
         roseClass.SetAssignmentLetter("r");
         roseClass.SetNoOfPos(2);
         roseClass.SetEnableLeftHand(true);
@@ -2316,7 +2320,7 @@ public class PhonemeDb : MonoBehaviour
 
         aenderClass = new PicturePhonemeClass(aender);
         aenderClass.SetImageName("aender");
-        aenderClass.SetAssignment("Hvad er den sidste lyd");
+        aenderClass.SetAssignment("Hvad er den sidste lyd i ordet");
         aenderClass.SetAssignmentLetter("r");
         aenderClass.SetNoOfPos(2);
         aenderClass.SetEnableLeftHand(true);
@@ -2334,7 +2338,7 @@ public class PhonemeDb : MonoBehaviour
 
         bilerClass = new PicturePhonemeClass(biler);
         bilerClass.SetImageName("biler");
-        bilerClass.SetAssignment("Hvad er den sidste lyd");
+        bilerClass.SetAssignment("Hvad er den sidste lyd i ordet");
         bilerClass.SetAssignmentLetter("r");
         bilerClass.SetNoOfPos(2);
         bilerClass.SetEnableLeftHand(true);
@@ -2352,7 +2356,7 @@ public class PhonemeDb : MonoBehaviour
 
         saelerClass = new PicturePhonemeClass(saeler);
         saelerClass.SetImageName("saeler");
-        saelerClass.SetAssignment("Hvad er den sidste lyd");
+        saelerClass.SetAssignment("Hvad er den sidste lyd i ordet");
         saelerClass.SetAssignmentLetter("r");
         saelerClass.SetNoOfPos(2);
         saelerClass.SetEnableLeftHand(true);
@@ -2370,7 +2374,7 @@ public class PhonemeDb : MonoBehaviour
 
         loeverClass = new PicturePhonemeClass(loever);
         loeverClass.SetImageName("loever");
-        loeverClass.SetAssignment("Hvad er den sidste lyd");
+        loeverClass.SetAssignment("Hvad er den sidste lyd i ordet");
         loeverClass.SetAssignmentLetter("r");
         loeverClass.SetNoOfPos(2);
         loeverClass.SetEnableLeftHand(true);
@@ -2389,7 +2393,7 @@ public class PhonemeDb : MonoBehaviour
         //t lyd
         togClass = new PicturePhonemeClass(tog);
         togClass.SetImageName("tog");
-        togClass.SetAssignment("Hvad er den første lyd");
+        togClass.SetAssignment("Hvad er den første lyd i ordet");
         togClass.SetAssignmentLetter("t");
         togClass.SetNoOfPos(3);
         togClass.SetEnableLeftHand(true);
@@ -2412,7 +2416,7 @@ public class PhonemeDb : MonoBehaviour
 
         katClass = new PicturePhonemeClass(kat);
         katClass.SetImageName("kat");
-        katClass.SetAssignment("Hvad er den sidste lyd");
+        katClass.SetAssignment("Hvad er den sidste lyd i ordet");
         katClass.SetAssignmentLetter("t");
         katClass.SetNoOfPos(3);
         katClass.SetEnableLeftHand(true);
@@ -2435,7 +2439,7 @@ public class PhonemeDb : MonoBehaviour
 
         hatClass = new PicturePhonemeClass(hatT);
         hatClass.SetImageName("hat");
-        hatClass.SetAssignment("Hvad er den sidste lyd");
+        hatClass.SetAssignment("Hvad er den sidste lyd i ordet");
         hatClass.SetAssignmentLetter("t");
         hatClass.SetNoOfPos(3);
         hatClass.SetEnableLeftHand(true);
@@ -2458,7 +2462,7 @@ public class PhonemeDb : MonoBehaviour
 
         troldClass = new PicturePhonemeClass(trold);
         troldClass.SetImageName("trold");
-        troldClass.SetAssignment("Hvad er den første lyd");
+        troldClass.SetAssignment("Hvad er den første lyd i ordet");
         troldClass.SetAssignmentLetter("t");
         troldClass.SetNoOfPos(3);
         troldClass.SetEnableLeftHand(true);
@@ -2481,7 +2485,7 @@ public class PhonemeDb : MonoBehaviour
 
         sutTClass = new PicturePhonemeClass(sutT);
         sutTClass.SetImageName("sut");
-        sutTClass.SetAssignment("Hvad er den sidste lyd");
+        sutTClass.SetAssignment("Hvad er den sidste lyd i ordet");
         sutTClass.SetAssignmentLetter("t");
         sutTClass.SetNoOfPos(3);
         sutTClass.SetEnableLeftHand(true);
@@ -2575,7 +2579,7 @@ public class PhonemeDb : MonoBehaviour
         //U lyd et 
         busUClass = new PicturePhonemeClass(busU);
         busUClass.SetImageName("bus");
-        busUClass.SetAssignment("Hvad er den midterste lyd");
+        busUClass.SetAssignment("Hvad er den midterste lyd i ordet");
         busUClass.SetAssignmentLetter("u");
         busUClass.SetNoOfPos(4);
         busUClass.SetEnableLeftHand(true);
@@ -2604,7 +2608,7 @@ public class PhonemeDb : MonoBehaviour
 
         ugleClass = new PicturePhonemeClass(ugle);
         ugleClass.SetImageName("ugle");
-        ugleClass.SetAssignment("Hvad er den første lyd");
+        ugleClass.SetAssignment("Hvad er den første lyd i ordet");
         ugleClass.SetAssignmentLetter("u");
         ugleClass.SetNoOfPos(4);
         ugleClass.SetEnableLeftHand(true);
@@ -2632,7 +2636,7 @@ public class PhonemeDb : MonoBehaviour
 
         murUClass = new PicturePhonemeClass(murU);
         murUClass.SetImageName("mur");
-        murUClass.SetAssignment("Hvad er den midterste lyd");
+        murUClass.SetAssignment("Hvad er den midterste lyd i ordet");
         murUClass.SetAssignmentLetter("u");
         murUClass.SetNoOfPos(4);
         murUClass.SetEnableLeftHand(true);
@@ -2660,7 +2664,7 @@ public class PhonemeDb : MonoBehaviour
 
         urClass = new PicturePhonemeClass(ur);
         urClass.SetImageName("ur");
-        urClass.SetAssignment("Hvad er den første lyd");
+        urClass.SetAssignment("Hvad er den første lyd i ordet");
         urClass.SetAssignmentLetter("u");
         urClass.SetNoOfPos(4);
         urClass.SetEnableLeftHand(true);
@@ -2688,7 +2692,7 @@ public class PhonemeDb : MonoBehaviour
 
         sutUClass = new PicturePhonemeClass(sutU);
         sutUClass.SetImageName("sut");
-        sutUClass.SetAssignment("Hvad er den midterste lyd");
+        sutUClass.SetAssignment("Hvad er den midterste lyd i ordet");
         sutUClass.SetAssignmentLetter("u");
         sutUClass.SetNoOfPos(4);
         sutUClass.SetEnableLeftHand(true);
@@ -2718,7 +2722,7 @@ public class PhonemeDb : MonoBehaviour
 
         frugtClass = new PicturePhonemeClass(frugt);
         frugtClass.SetImageName("frugt");
-        frugtClass.SetAssignment("Hvad er den midterste lyd");
+        frugtClass.SetAssignment("Hvad er den midterste lyd i ordet");
         frugtClass.SetAssignmentLetter("u");
         frugtClass.SetNoOfPos(4);
         frugtClass.SetEnableLeftHand(true);
@@ -2746,7 +2750,7 @@ public class PhonemeDb : MonoBehaviour
 
         vuggeClass = new PicturePhonemeClass(vugge);
         vuggeClass.SetImageName("vugge");
-        vuggeClass.SetAssignment("Hvad er den første vokal lyd");
+        vuggeClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         vuggeClass.SetAssignmentLetter("u");
         vuggeClass.SetNoOfPos(4);
         vuggeClass.SetEnableLeftHand(true);
@@ -2774,7 +2778,7 @@ public class PhonemeDb : MonoBehaviour
 
         dukkeClass = new PicturePhonemeClass(dukke);
         dukkeClass.SetImageName("dukke");
-        dukkeClass.SetAssignment("Hvad er den første vokal lyd");
+        dukkeClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         dukkeClass.SetAssignmentLetter("u");
         dukkeClass.SetNoOfPos(4);
         dukkeClass.SetEnableLeftHand(true);
@@ -2802,7 +2806,7 @@ public class PhonemeDb : MonoBehaviour
 
         nulClass = new PicturePhonemeClass(nul);
         nulClass.SetImageName("nul");
-        nulClass.SetAssignment("Hvad er den midterste lyd");
+        nulClass.SetAssignment("Hvad er den midterste lyd i ordet");
         nulClass.SetAssignmentLetter("u");
         nulClass.SetNoOfPos(4);
         nulClass.SetEnableLeftHand(true);
@@ -2830,7 +2834,7 @@ public class PhonemeDb : MonoBehaviour
 
         gulvClass = new PicturePhonemeClass(gulv);
         gulvClass.SetImageName("gulv");
-        gulvClass.SetAssignment("Hvad er den midterste lyd");
+        gulvClass.SetAssignment("Hvad er den midterste lyd i ordet");
         gulvClass.SetAssignmentLetter("u");
         gulvClass.SetNoOfPos(4);
         gulvClass.SetEnableLeftHand(true);
@@ -2860,7 +2864,7 @@ public class PhonemeDb : MonoBehaviour
 
         vinVClass = new PicturePhonemeClass(vinV);
         vinVClass.SetImageName("vin");
-        vinVClass.SetAssignment("Hvad er den første lyd");
+        vinVClass.SetAssignment("Hvad er den første lyd i ordet");
         vinVClass.SetAssignmentLetter("v");
         vinVClass.SetNoOfPos(2);
         vinVClass.SetEnableLeftHand(true);
@@ -2878,7 +2882,7 @@ public class PhonemeDb : MonoBehaviour
 
         vestVClass = new PicturePhonemeClass(vestV);
         vestVClass.SetImageName("vest");
-        vestVClass.SetAssignment("Hvad er den første lyd");
+        vestVClass.SetAssignment("Hvad er den første lyd i ordet");
         vestVClass.SetAssignmentLetter("v");
         vestVClass.SetNoOfPos(2);
         vestVClass.SetEnableLeftHand(true);
@@ -2896,7 +2900,7 @@ public class PhonemeDb : MonoBehaviour
 
         loeveClass = new PicturePhonemeClass(loeve);
         loeveClass.SetImageName("loeve");
-        loeveClass.SetAssignment("Hvad er den sidste konsonant i ordet");
+        loeveClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         loeveClass.SetAssignmentLetter("v");
         loeveClass.SetNoOfPos(2);
         loeveClass.SetEnableLeftHand(true);
@@ -2914,7 +2918,7 @@ public class PhonemeDb : MonoBehaviour
 
         riveClass = new PicturePhonemeClass(rive);
         riveClass.SetImageName("rive");
-        riveClass.SetAssignment("Hvad er den sidste konsonant i ordet");
+        riveClass.SetAssignment("Hvad er den sidste konsonant-lyd i ordet");
         riveClass.SetAssignmentLetter("v");
         riveClass.SetNoOfPos(2);
         riveClass.SetEnableLeftHand(true);
@@ -2934,7 +2938,7 @@ public class PhonemeDb : MonoBehaviour
 
         havClass = new PicturePhonemeClass(hav);
         havClass.SetImageName("hav");
-        havClass.SetAssignment("Hvad er den sidste lyd");
+        havClass.SetAssignment("Hvad er den sidste lyd i ordet");
         havClass.SetAssignmentLetter("v");
         havClass.SetNoOfPos(4);
         havClass.SetEnableLeftHand(true);
@@ -2962,7 +2966,7 @@ public class PhonemeDb : MonoBehaviour
 
         savClass = new PicturePhonemeClass(sav);
         savClass.SetImageName("sav");
-        savClass.SetAssignment("Hvad er den sidste lyd");
+        savClass.SetAssignment("Hvad er den sidste lyd i ordet");
         savClass.SetAssignmentLetter("v");
         savClass.SetNoOfPos(4);
         savClass.SetEnableLeftHand(true);
@@ -2990,7 +2994,7 @@ public class PhonemeDb : MonoBehaviour
 
         raevClass = new PicturePhonemeClass(raev);
         raevClass.SetImageName("raev");
-        raevClass.SetAssignment("Hvad er den sidste lyd");
+        raevClass.SetAssignment("Hvad er den sidste lyd i ordet");
         raevClass.SetAssignmentLetter("v");
         raevClass.SetNoOfPos(4);
         raevClass.SetEnableLeftHand(true);
@@ -3018,7 +3022,7 @@ public class PhonemeDb : MonoBehaviour
 
         skovClass = new PicturePhonemeClass(skov);
         skovClass.SetImageName("skov");
-        skovClass.SetAssignment("Hvad er den sidste lyd");
+        skovClass.SetAssignment("Hvad er den sidste lyd i ordet");
         skovClass.SetAssignmentLetter("v");
         skovClass.SetNoOfPos(4);
         skovClass.SetEnableLeftHand(true);
@@ -3127,7 +3131,7 @@ public class PhonemeDb : MonoBehaviour
 
         broedClass = new PicturePhonemeClass(broed);
         broedClass.SetImageName("brød");
-        broedClass.SetAssignment("Hvad er den første vokal lyd");
+        broedClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
         broedClass.SetAssignmentLetter("ø");
         broedClass.SetNoOfPos(1);
         broedClass.SetEnableRightHand(true);
@@ -3138,22 +3142,22 @@ public class PhonemeDb : MonoBehaviour
         broedClass.SetRightHandPos1(øClass.GetRightHandpos1());
         broedClass.SetRightHandAngle1(øClass.GetRightHandAngle1());
 
-        noegleClass = new PicturePhonemeClass(noegle);
-         noegleClass.SetImageName("nøgle");
-         noegleClass.SetAssignment("Hvad er den første vokal lyd");
-         noegleClass.SetAssignmentLetter("ø");
-         noegleClass.SetNoOfPos(1);
-         noegleClass.SetEnableRightHand(true);
-         noegleClass.SetEnableLeftHand(true);
-         noegleClass.SetPos1ReadyToHit(true);
-         noegleClass.SetLeftHandPos1(øClass.GetLeftHandpos1());
-         noegleClass.SetLeftHandAngle1(øClass.GetLeftHandAngle1());
-         noegleClass.SetRightHandPos1(øClass.GetRightHandpos1());
-         noegleClass.SetRightHandAngle1(øClass.GetRightHandAngle1());
+        oekseClass = new PicturePhonemeClass(oekse);
+        oekseClass.SetImageName("økse");
+        oekseClass.SetAssignment("Hvad er den første lyd i ordet");
+        oekseClass.SetAssignmentLetter("ø");
+        oekseClass.SetNoOfPos(1);
+        oekseClass.SetEnableRightHand(true);
+        oekseClass.SetEnableLeftHand(true);
+        oekseClass.SetPos1ReadyToHit(true);
+        oekseClass.SetLeftHandPos1(øClass.GetLeftHandpos1());
+        oekseClass.SetLeftHandAngle1(øClass.GetLeftHandAngle1());
+        oekseClass.SetRightHandPos1(øClass.GetRightHandpos1());
+        oekseClass.SetRightHandAngle1(øClass.GetRightHandAngle1());
 
         oernClass = new PicturePhonemeClass(oern);
        oernClass.SetImageName("ørn");
-       oernClass.SetAssignment("Hvad er den første lyd");
+       oernClass.SetAssignment("Hvad er den første lyd i ordet");
        oernClass.SetAssignmentLetter("ø");
        oernClass.SetNoOfPos(1);
        oernClass.SetEnableRightHand(true);
@@ -3166,7 +3170,7 @@ public class PhonemeDb : MonoBehaviour
 
         oereClass = new PicturePhonemeClass(oere);
        oereClass.SetImageName("øre");
-       oereClass.SetAssignment("Hvad er den første vokal lyd");
+       oereClass.SetAssignment("Hvad er den første vokal-lyd i ordet");
        oereClass.SetAssignmentLetter("ø");
        oereClass.SetNoOfPos(1);
        oereClass.SetEnableRightHand(true);
@@ -3242,7 +3246,6 @@ public class PhonemeDb : MonoBehaviour
         picturePhonemeList.Add(bamseClass);
         picturePhonemeList.Add(egernClass);
         picturePhonemeList.Add(feClass);
-        picturePhonemeList.Add(daaseClass);
         picturePhonemeList.Add(aebleClass);
         picturePhonemeList.Add(gaasClass);
         picturePhonemeList.Add(laasClass);
@@ -3260,8 +3263,8 @@ public class PhonemeDb : MonoBehaviour
         picturePhonemeList.Add(kanoClass);
         picturePhonemeList.Add(kopOClass);
         picturePhonemeList.Add(sokOClass);
-        picturePhonemeList.Add(ostClass);
-        picturePhonemeList.Add(otteClass);
+        picturePhonemeList.Add(blomstClass);
+        picturePhonemeList.Add(skovOClass);
         picturePhonemeList.Add(boldOClass);
         picturePhonemeList.Add(togClass);
         picturePhonemeList.Add(katClass);
@@ -3305,7 +3308,7 @@ public class PhonemeDb : MonoBehaviour
         picturePhonemeList.Add(kamelClass);
         picturePhonemeList.Add(vinClass);
         picturePhonemeList.Add(tiClass);
-        picturePhonemeList.Add(nisseClass);
+        picturePhonemeList.Add(bilClass);
         picturePhonemeList.Add(isbjoernClass);
         picturePhonemeList.Add(igloClass);
         picturePhonemeList.Add(girafIClass);
@@ -3348,7 +3351,7 @@ public class PhonemeDb : MonoBehaviour
         picturePhonemeList.Add(skovClass);
         picturePhonemeList.Add(boefClass);
         picturePhonemeList.Add(broedClass);
-        picturePhonemeList.Add(noegleClass);
+        picturePhonemeList.Add(oekseClass);
         picturePhonemeList.Add(oernClass);
         picturePhonemeList.Add(oereClass);
         picturePhonemeList.Add(aegClass);

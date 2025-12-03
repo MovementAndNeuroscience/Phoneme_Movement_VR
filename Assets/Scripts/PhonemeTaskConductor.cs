@@ -40,7 +40,15 @@ public class PhonemeTaskConductor : MonoBehaviour
     private int totPictures = 0;
     private int presentedPictures = 0; 
     private Renderer thisRender;
-    private float readytimer = 0.00f; 
+    private float readytimer = 0.00f;
+    private float startNextAssignment = 2.2f;
+    private float pausetimer = 1.4f;
+    private bool pos1; 
+    private bool pos2;
+    private bool pos3;
+    private bool pos4;
+    private bool pos5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -76,9 +84,9 @@ public class PhonemeTaskConductor : MonoBehaviour
     {
         readytimer += Time.deltaTime;  
 
-        if (pictureFound == false && readytimer < 2.0f)
+        if (pictureFound == false && readytimer < startNextAssignment)
         {
-            readytimer = 0.0f; 
+            readytimer = readytimer - readytimer;
             if (pictureList.Count == 0)
             {
                 allImagesPresented = true;
@@ -91,6 +99,8 @@ public class PhonemeTaskConductor : MonoBehaviour
                     pictureList.Remove(picture);
                     pictureFound = true;
                     presentedPictures++;
+
+                    currentPicture = ResetPicture(currentPicture);
 
                     ActivateAll();
 
@@ -120,7 +130,7 @@ public class PhonemeTaskConductor : MonoBehaviour
                     rightHandCollision5.transform.eulerAngles = currentPicture.GetRightHandAngle5();
 
                     DeactivateAll();
-
+                    pos1 = true;
                     break;
                 }
             }
@@ -128,9 +138,9 @@ public class PhonemeTaskConductor : MonoBehaviour
         thisRender.material.mainTexture = currentPicture.image;
         text.text = currentPicture.GetAssignment();
         
-        if (readytimer > 2.0f && readytimer < 999.0f)
+        if (readytimer > startNextAssignment && readytimer < 999.0f)
         {
-            if (currentPicture.GetNoOfPos() == 1)
+            if (currentPicture.GetNoOfPos() == 1 && currentPicture.GetLHandHit() == 0 && currentPicture.GetRHandHit() == 0)
             {
                 ActivateCollision1();
                 leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
@@ -142,143 +152,187 @@ public class PhonemeTaskConductor : MonoBehaviour
             else if (currentPicture.GetNoOfPos() == 2)
             {
 
-                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-
-                    ActivateCollision1();                  
-                    leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
-                    rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
-                    readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                    if(pos1)
+                    {
+                        ActivateCollision1();                  
+                        leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
+                        rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
+                        readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                        (pos1, pos2) = activateNextPosition(pos1, pos2);
+                    }
                 }
-                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > 2.0f) )
+                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment) )
                 {
-                    ActivateCollision2();
-                    leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
-                    rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
-                    pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided2, rightHandCollided2);
-                    readytimer = LastTargetHit(readytimer, pictureFound);
+                    if (pos2)
+                    {
+                        ActivateCollision2();
+                        leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
+                        rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
+                        pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided2, rightHandCollided2);
+                        readytimer = LastTargetHit(readytimer, pictureFound);
+                    }
                 }
 
             }
             else if (currentPicture.GetNoOfPos() == 3)
             {
 
-                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-
-                    ActivateCollision1();                   
-                    leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
-                    rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
-                    readytimer =  ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                    if (pos1)
+                    {
+                        ActivateCollision1();
+                        leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
+                        rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
+                        readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                        (pos1, pos2) = activateNextPosition(pos1, pos2);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision2();
-                    leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
-                    rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
-                    readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                    if (pos2)
+                    {
+                        ActivateCollision2();
+                        leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
+                        rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
+                        readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                        (pos2, pos3) = activateNextPosition(pos2, pos3);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision3();
-                    leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
-                    rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
-                    pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided3, rightHandCollided3);
-                    readytimer = LastTargetHit(readytimer, pictureFound); 
+                    if (pos3)
+                    {
+                        ActivateCollision3();
+                        leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
+                        rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
+                        pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided3, rightHandCollided3);
+                        readytimer = LastTargetHit(readytimer, pictureFound);
+                    }
                 }
 
             }
             else if (currentPicture.GetNoOfPos() == 4)
             {
 
-                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision1();
-                    leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
-                    rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
-                    readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                    if (pos1)
+                    {
+                        ActivateCollision1();
+                        leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
+                        rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
+                        readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                        (pos1, pos2) = activateNextPosition(pos1, pos2);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision2();
-
-                    leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
-                    rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
-                    readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                    if (pos2)
+                    {
+                        ActivateCollision2();
+                        leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
+                        rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
+                        readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                        (pos2, pos3) = activateNextPosition(pos2, pos3);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision3();
-
-                    leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
-                    rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
-                    readytimer = ReactOnCollision(leftHandCollided3, rightHandCollided3, readytimer);
+                    if (pos3)
+                    {
+                        ActivateCollision3();
+                        leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
+                        rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
+                        readytimer = ReactOnCollision(leftHandCollided3, rightHandCollided3, readytimer);
+                        (pos3, pos4) = activateNextPosition(pos3, pos4);
+                    }
                 }
-                else if ((currentPicture.GetLHandHit() == 3 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 3 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 3 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 3 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision4();
-
-                    leftHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided4;
-                    rightHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided4;
-                    pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided4, rightHandCollided4);
-                    readytimer = LastTargetHit(readytimer, pictureFound);
+                    if (pos4)
+                    {
+                        ActivateCollision4();
+                        leftHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided4;
+                        rightHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided4;
+                        pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided4, rightHandCollided4);
+                        readytimer = LastTargetHit(readytimer, pictureFound);
+                    }
                 }
             }
             else if (currentPicture.GetNoOfPos() == 5)
             {
 
-                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                if ((currentPicture.GetLHandHit() == 0 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 0 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision1();
-                    leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
-                    rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
-                    readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                    if (pos1)
+                    {
+                        ActivateCollision1();
+                        leftHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided;
+                        rightHandCollided = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided;
+                        readytimer = ReactOnCollision(leftHandCollided, rightHandCollided, readytimer);
+                        (pos1, pos2) = activateNextPosition(pos1, pos2);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 1 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 1 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision2();
-
-                    leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
-                    rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
-                    readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                    if (pos2)
+                    {
+                        ActivateCollision2();
+                        leftHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided2;
+                        rightHandCollided2 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided2;
+                        readytimer = ReactOnCollision(leftHandCollided2, rightHandCollided2, readytimer);
+                        (pos2, pos3) = activateNextPosition(pos2, pos3);
+                    }
                 }
 
-                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 2 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 2 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision3();
-
-                    leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
-                    rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
-                    readytimer = ReactOnCollision(leftHandCollided3, rightHandCollided3, readytimer);
+                    if (pos3)
+                    {
+                        ActivateCollision3();
+                        leftHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided3;
+                        rightHandCollided3 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided3;
+                        readytimer = ReactOnCollision(leftHandCollided3, rightHandCollided3, readytimer);
+                        (pos3, pos4) = activateNextPosition(pos3, pos4);
+                    }
                 }
-                else if ((currentPicture.GetLHandHit() == 3 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 3 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 3 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 3 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision4();
-
-                    leftHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided4;
-                    rightHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided4;
-                    readytimer = ReactOnCollision(leftHandCollided4, rightHandCollided4, readytimer);
+                    if (pos4)
+                    {
+                        ActivateCollision4();
+                        leftHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided4;
+                        rightHandCollided4 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided4;
+                        readytimer = ReactOnCollision(leftHandCollided4, rightHandCollided4, readytimer);
+                        (pos4, pos5) = activateNextPosition(pos4, pos5);
+                    }
                 }
-                else if ((currentPicture.GetLHandHit() == 4 && currentPicture.GetEnableLeftHand() && readytimer > 2.0f) || (currentPicture.GetRHandHit() == 4 && currentPicture.GetEnableRightHand() && readytimer > 2.0f))
+                else if ((currentPicture.GetLHandHit() == 4 && currentPicture.GetEnableLeftHand() && readytimer > startNextAssignment) || (currentPicture.GetRHandHit() == 4 && currentPicture.GetEnableRightHand() && readytimer > startNextAssignment))
                 {
-                    ActivateCollision5();
-
-                    leftHandCollided5 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided5;
-                    rightHandCollided5 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided5;
-                    pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided5, rightHandCollided5);
-                    readytimer = LastTargetHit(readytimer, pictureFound);
+                    if (pos5)
+                    {
+                        ActivateCollision5();
+                        leftHandCollided5 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().leftCollided5;
+                        rightHandCollided5 = phonemeConductor.GetComponent<HandColliderCollisionDetection>().rightCollided5;
+                        pictureFound = ReactOnTheLasPossibletCollision(leftHandCollided5, rightHandCollided5);
+                        readytimer = LastTargetHit(readytimer, pictureFound);
+                    }
                 }
             }
         }
         if (readytimer >= 999.6f)
         {
             ResetColliderPositions();
-            readytimer = 0.0f;
+            ResetPositionActivation();
+            readytimer = readytimer - 999.6f;
         }
     }
 
@@ -292,12 +346,24 @@ public class PhonemeTaskConductor : MonoBehaviour
             phonemeConductor.GetComponent<FeedbackChanger>().setFeedbackValue(percentagePicturesSucceeded);
             phonemeConductor.GetComponent<ScoreIncrementer>().IncreaseScore();
             AudioSource.PlayClipAtPoint(plingSound, new Vector3(0.0f, 0.0f, 0.0f));
-
             return 999.0f;
         }
         return readytimer;
     }
-
+    private PicturePhonemeClass ResetPicture (PicturePhonemeClass picture)
+    {
+        picture.SetLHandHit(0);
+        picture.SetRHandHit(0); 
+        return picture; 
+    }
+    private void ResetPositionActivation()
+    {
+        pos1 = false;
+        pos2 = false;
+        pos3 = false;
+        pos4 = false;
+        pos5 = false; 
+    }
     private void ResetColliderPositions()
     {
         leftHandCollision.transform.position = new Vector3 (0.1f, -0.2f, 0f);
@@ -411,21 +477,21 @@ public class PhonemeTaskConductor : MonoBehaviour
 
     private float ReactOnCollision(bool collideLeft, bool collideRight, float time)
     {
-        if (currentPicture.GetEnableLeftHand() && !currentPicture.GetEnableRightHand() && collideLeft && collideRight == false && time > 2.0f)
+        if (currentPicture.GetEnableLeftHand() && !currentPicture.GetEnableRightHand() && collideLeft && collideRight == false && time > startNextAssignment)
         {
             currentPicture.IncrLHandHit();
-            return 1.4f; 
+            return pausetimer; 
         }
-        else if (!currentPicture.GetEnableLeftHand() && currentPicture.GetEnableRightHand() && collideRight && collideLeft == false && time > 2.0f)
+        else if (!currentPicture.GetEnableLeftHand() && currentPicture.GetEnableRightHand() && collideRight && collideLeft == false && time > startNextAssignment)
         {
             currentPicture.IncrRHandHit();
-            return 1.4f;
+            return pausetimer;
         }
-        else if (currentPicture.GetEnableLeftHand() && currentPicture.GetEnableRightHand() && collideLeft && collideRight && time > 2.0f)
+        else if (currentPicture.GetEnableLeftHand() && currentPicture.GetEnableRightHand() && collideLeft && collideRight && time > startNextAssignment)
         {
             currentPicture.IncrLHandHit();
             currentPicture.IncrRHandHit();
-            return 1.4f;
+            return pausetimer;
         }
         return time; 
     }
@@ -449,6 +515,16 @@ public class PhonemeTaskConductor : MonoBehaviour
             return false;
         }
         return true; 
+    }
+    private (bool, bool) activateNextPosition (bool prevPos, bool nextPos)
+    {
+        if (readytimer == pausetimer)
+        {
+            nextPos = true;
+            prevPos = false;
+            return (prevPos, nextPos);
+        }
+        return (prevPos,nextPos); 
     }
 
     public PicturePhonemeClass GetCurrentPicture()

@@ -126,7 +126,7 @@ public class Conductor : MonoBehaviour
         }
 
 
-        if(tutorialHasPlayed && activateTaskMode == false)
+        if(calibrationHasPlayed && tutorialHasPlayed && activateTaskMode == false)
         {
             tutStar.SetActive(true);
             l_Hand_Guidance.SetActive(false);

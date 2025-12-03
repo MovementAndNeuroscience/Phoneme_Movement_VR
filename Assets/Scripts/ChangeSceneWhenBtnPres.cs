@@ -15,6 +15,7 @@ public class ChangeSceneWhenBtnPres : MonoBehaviour
     public string dy_sceneName;
     public string voog_sceneName;
     public string all_sceneName;
+    public string all_Assignment_sceneName;
     public GameObject lHandGuide;
     public GameObject rHandGuide;
     public GameObject se_btnCollider;
@@ -26,6 +27,7 @@ public class ChangeSceneWhenBtnPres : MonoBehaviour
     public GameObject dy_btnCollider;
     public GameObject voog_btnCollider;
     public GameObject all_btnCollider;
+    public GameObject all_assign_btnCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +92,12 @@ public class ChangeSceneWhenBtnPres : MonoBehaviour
 
             if (OVRInput.GetDown(OVRInput.Button.One) || Input.GetKeyDown(KeyCode.A))
             SceneManager.LoadScene(all_sceneName);
+        }
+        else if (CollisionDetection(lHandGuide, all_assign_btnCollider) || CollisionDetection(rHandGuide, all_assign_btnCollider))
+        {
+
+            if (OVRInput.GetDown(OVRInput.Button.One) || Input.GetKeyDown(KeyCode.A))
+                SceneManager.LoadScene(all_Assignment_sceneName);
         }
     }
 

@@ -71,14 +71,14 @@ public class HandColliderCollisionDetection : MonoBehaviour
 
     private (bool, bool) CollisionDetection(GameObject hand, GameObject collider, bool collided, bool readyForCollision)
     {
-        if (collider.transform.position.x + collider.transform.localScale.x > hand.transform.position.x && collider.transform.position.x - collider.transform.localScale.x < hand.transform.position.x &&
-            collider.transform.position.y + collider.transform.localScale.y > hand.transform.position.y && collider.transform.position.y - collider.transform.localScale.y < hand.transform.position.y && readyForCollision)
+        if (collider.transform.position.x + collider.transform.localScale.x/2 > hand.transform.position.x && collider.transform.position.x - collider.transform.localScale.x/2 < hand.transform.position.x &&
+            collider.transform.position.y + collider.transform.localScale.y/2 > hand.transform.position.y && collider.transform.position.y - collider.transform.localScale.y/2 < hand.transform.position.y && readyForCollision)
         {
             return (true, false);
         }
 
-        else if (collider.transform.position.x + collider.transform.localScale.x > hand.transform.position.x && collider.transform.position.x - collider.transform.localScale.x < hand.transform.position.x &&
-            collider.transform.position.y + collider.transform.localScale.y > hand.transform.position.y && collider.transform.position.y - collider.transform.localScale.y < hand.transform.position.y && !readyForCollision)
+        else if (collider.transform.position.x + collider.transform.localScale.x/2 > hand.transform.position.x && collider.transform.position.x - collider.transform.localScale.x/2 < hand.transform.position.x &&
+                 collider.transform.position.y + collider.transform.localScale.y/2 > hand.transform.position.y && collider.transform.position.y - collider.transform.localScale.y/2 < hand.transform.position.y && !readyForCollision)
         {
             return (collided, readyForCollision); 
         }
