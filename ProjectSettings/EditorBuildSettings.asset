@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Pick Gender.unity
     guid: 01218e3a1cdfb3e478349329e6b07199
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Intro Scene.unity
     guid: f0530b7dc705eff4a86294d49c670188
@@ -18,14 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 4ea4937496989714a98e5fb8c13d355e
   - enabled: 1
+    path: Assets/Scenes/GirlScenes/MenuScene_Girl.unity
+    guid: 70106a1d8a8dde244b952193116a9ef6
+  - enabled: 1
     path: Assets/Scenes/Laa_game.unity
     guid: 37dc24ca02caf3a4c90c4070ab03dca5
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/voog_game.unity
     guid: 3cb4b447e608f054ab882bc3579f0119
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/all_game.unity
     guid: 94817699ce1910e4da0ac20336674ea7
@@ -50,6 +50,39 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/all_game_no_tut.unity
     guid: 3f99053597ecc634281c531c50fd132b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/all_game_Girl.unity
+    guid: d1777759c7f187b42969f8489727e482
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/all_game_no_tut_Girl.unity
+    guid: a30d0cb7da37f4848aef9116b60d89bf
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Dy_game_Girl.unity
+    guid: fc176b6082c9d7641aa11dc05bb3b528
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Kab_game_Girl.unity
+    guid: b5ba95be07f8f6f40874118b184f196a
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Laa_game_Girl.unity
+    guid: a74c4b19cf7cd2644b6a60fdb6474d41
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/mu_game_Girl.unity
+    guid: eb1181974dcc89f4998046ab956914bd
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Ot_game_Girl.unity
+    guid: 42861bbbe9c4e854ea3947e3063c1675
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Rin_game_Girl.unity
+    guid: d48c4f25ef71be54cb96b0006d6dbb63
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/Se_game_Girl.unity
+    guid: 7759e0d389dca9c41a4fa3c1df531170
+  - enabled: 1
+    path: Assets/Scenes/GirlScenes/voog_game_Girl.unity
+    guid: 5f86d30f92526d24497ec6f677dba525
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c17d7f9ba2c75ae4abaaa7013327f485,
       type: 2}

@@ -7808,16 +7808,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97be2fb0d9e28d34cb934fd9aa2b9406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se_sceneName: Se_game
-  laa_sceneName: Laa_game
-  ot_sceneName: Ot_game
-  kab_sceneName: Kab_game
-  mu_sceneName: mu_game
-  rin_sceneName: Rin_game
-  dy_sceneName: Dy_game
-  voog_sceneName: voog_game
-  all_sceneName: all_game
-  all_Assignment_sceneName: all_game_no_tut
+  se_sceneName: Se_game_Girl
+  laa_sceneName: Laa_game_Girl
+  ot_sceneName: Ot_game_Girl
+  kab_sceneName: Kab_game_Girl
+  mu_sceneName: mu_game_Girl
+  rin_sceneName: Rin_game_Girl
+  dy_sceneName: Dy_game_Girl
+  voog_sceneName: voog_game_Girl
+  all_sceneName: all_game_Girl
+  all_Assignment_sceneName: all_game_no_tut_Girl
   lHandGuide: {fileID: 1464591559}
   rHandGuide: {fileID: 1686690772}
   se_btnCollider: {fileID: 2110648098}
