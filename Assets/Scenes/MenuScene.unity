@@ -1879,9 +1879,12 @@ MonoBehaviour:
   leftOutlineCube5: {fileID: 1732882845}
   rightOutlineCube5: {fileID: 1929934894}
   phonemeVideoPlane: {fileID: 1657768937}
+  leftGuide: {fileID: 1464591559}
+  rightGuide: {fileID: 1686690772}
   tutorialMode: 0
   taskMode: 0
   calibrationMode: 0
+  invisibleGuides: 0
 --- !u!114 &93277122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18722,8 +18725,8 @@ MonoBehaviour:
   kano: {fileID: 2800000, guid: b0a3810a4af71c64786a6685f736c921, type: 3}
   kopO: {fileID: 2800000, guid: 4865edba51fa2a5408c820f0981e6565, type: 3}
   sokO: {fileID: 2800000, guid: 259c53dfb3b59a341877aa3982aec2b3, type: 3}
-  ost: {fileID: 2800000, guid: 72484a71b585d3341870f70c9eaafb43, type: 3}
-  otte: {fileID: 2800000, guid: ed22133cb1c858a449f23d00f5639197, type: 3}
+  blomst: {fileID: 0}
+  skovO: {fileID: 0}
   boldO: {fileID: 2800000, guid: 55997ef2fec673f4592d47d526d67691, type: 3}
   tog: {fileID: 2800000, guid: 1673aca49da3a6646b5d3b1fb2ff91be, type: 3}
   kat: {fileID: 2800000, guid: 40668dda5afc64e469817e6ffc8f65fd, type: 3}
@@ -18809,7 +18812,7 @@ MonoBehaviour:
   skov: {fileID: 2800000, guid: 532fb28c08b901540bad7b26e9dc019e, type: 3}
   boef: {fileID: 2800000, guid: 936b01895a79e8d4891e6cad60259380, type: 3}
   broed: {fileID: 2800000, guid: 5192c7adb0484c847a7a381a218292e9, type: 3}
-  noegle: {fileID: 2800000, guid: a71353fd3530a18409c5f092db526aed, type: 3}
+  oekse: {fileID: 0}
   oern: {fileID: 2800000, guid: b6692a90f80c4d44ea40ab8d615338c1, type: 3}
   oere: {fileID: 2800000, guid: e2f8ece0099924a4dbd519ce6a5ba5bd, type: 3}
   aeg: {fileID: 2800000, guid: 197b3db22765dd640b5653b1c407d977, type: 3}
@@ -24843,7 +24846,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b91f45fcb4f6bd842af97196d88a5b51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28598,7 +28601,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b91f45fcb4f6bd842af97196d88a5b51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28868,6 +28871,7 @@ MonoBehaviour:
   caliStar: {fileID: 2040206120}
   tutStar: {fileID: 1978993127}
   taskStar: {fileID: 1562157982}
+  enableInvisibleGuides: 0
 --- !u!1 &1693677743
 GameObject:
   m_ObjectHideFlags: 0

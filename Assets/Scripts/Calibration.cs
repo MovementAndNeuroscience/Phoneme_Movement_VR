@@ -12,7 +12,8 @@ public class Calibration : MonoBehaviour
     public AudioClip plingSound;
     public GameObject feedbackSlider;
     public GameObject feebackFillArea;
-    public GameObject feedbackHandle; 
+    public GameObject feedbackHandle;
+    public float targetZPos = 0.581f;
     private bool leftCollided = false;
     private bool rightCollided = false;
     private int calibrationpos = 1;
@@ -33,8 +34,8 @@ public class Calibration : MonoBehaviour
         
         if (calibrationpos == 1)
         {
-            leftHAndCollision.transform.position = new Vector3 (0.091f, 1.582f, -0.7751f);
-            rightHAndCollision.transform.position = new Vector3 (-0.091f, 1.582f, -0.7751f);
+            leftHAndCollision.transform.position = new Vector3 (0.091f, 1.582f, targetZPos);
+            rightHAndCollision.transform.position = new Vector3 (-0.091f, 1.582f, targetZPos);
             leftHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
             rightHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
 
@@ -51,8 +52,8 @@ public class Calibration : MonoBehaviour
 
         if (calibrationpos == 2)
         {
-            leftHAndCollision.transform.position = new Vector3(0.550f, 1.17f, -0.7751f);
-            rightHAndCollision.transform.position = new Vector3(-0.550f, 1.17f, -0.7751f);
+            leftHAndCollision.transform.position = new Vector3(0.550f, 1.17f, targetZPos);
+            rightHAndCollision.transform.position = new Vector3(-0.550f, 1.17f, targetZPos);
             leftHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
             rightHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
 
@@ -69,8 +70,8 @@ public class Calibration : MonoBehaviour
 
         if (calibrationpos == 3)
         {
-            leftHAndCollision.transform.position = new Vector3(0.437f, 0.769f, -0.7751f);
-            rightHAndCollision.transform.position = new Vector3(-0.437f, 0.769f, -0.7751f);
+            leftHAndCollision.transform.position = new Vector3(0.437f, 0.769f, targetZPos);
+            rightHAndCollision.transform.position = new Vector3(-0.437f, 0.769f, targetZPos);
             leftHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
             rightHAndCollision.transform.eulerAngles = new Vector3(0, 0, 0);
 

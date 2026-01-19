@@ -15,9 +15,12 @@ public class MaterialChanger : MonoBehaviour
     public GameObject leftOutlineCube5;
     public GameObject rightOutlineCube5;
     public GameObject phonemeVideoPlane;
+    public GameObject leftGuide;
+    public GameObject rightGuide;
     public bool tutorialMode = false;
     public bool taskMode = false; 
     public bool calibrationMode = false;
+    public bool invisibleGuides = false;
     private bool leftHandCollision = false;
     private bool rightHandCollision = false;
     private bool leftHandCollision2 = false;
@@ -38,6 +41,8 @@ public class MaterialChanger : MonoBehaviour
     private Renderer rOutlineRenderer4;
     private Renderer lOutlineRenderer5;
     private Renderer rOutlineRenderer5;
+    private Renderer leftGuideRenderer;
+    private Renderer rightGuideRenderer;
     private PhonemeVideoClass currentVideo;
 
 
@@ -70,7 +75,20 @@ public class MaterialChanger : MonoBehaviour
         rOutlineRenderer4 = rightOutlineCube4.GetComponent<Renderer>();
         lOutlineRenderer5 = leftOutlineCube5.GetComponent<Renderer>();
         rOutlineRenderer5 = rightOutlineCube5.GetComponent<Renderer>();
+        leftGuideRenderer = leftGuide.GetComponent<Renderer>();
+        rightGuideRenderer = rightGuide.GetComponent<Renderer>();
 
+        if(invisibleGuides)
+        {
+            leftGuideRenderer.material.SetColor("_Color", new Color(0.0f, 0.0f, 0.0f, 0.0f));
+            rightGuideRenderer.material.SetColor("_Color", new Color(0.0f, 0.0f, 0.0f, 0.0f));
+        }
+        else
+        {
+            leftGuideRenderer.material.SetColor("_Color", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+            rightGuideRenderer.material.SetColor("_Color", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+        }
+        
         if (tutorialMode)
         {
             currentVideo = phonemeVideoPlane.GetComponent<TutorialVideoConductor>().GetCurrentVideo();

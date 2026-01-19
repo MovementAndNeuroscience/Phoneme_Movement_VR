@@ -29,6 +29,7 @@ public class Conductor : MonoBehaviour
     public GameObject tutStar;
     public GameObject taskStar;
     private TMP_Text text;
+    public bool enableInvisibleGuides = true;
     private bool activateTutorial = false;
     private bool tutorialHasPlayed = false;
     private bool activateTaskMode = false;
@@ -87,6 +88,7 @@ public class Conductor : MonoBehaviour
             scorecounter.SetActive(true);
             phoneme_Conductor.GetComponent<GestureConductor>().enabled = false;
             phoneme_Conductor.GetComponent<MaterialChanger>().calibrationMode = true;
+            phoneme_Conductor.GetComponent<MaterialChanger>().invisibleGuides = false;
             activateTutorial = false;
             text.text = "Rør kasserne med pindene";
         }
@@ -120,6 +122,8 @@ public class Conductor : MonoBehaviour
             phoneme_Conductor.GetComponent<GestureConductor>().enabled = true;
             phoneme_Conductor.GetComponent<MaterialChanger>().tutorialMode = true;
             phoneme_Conductor.GetComponent<FeedbackChanger>().setFeedbackValue(0.0f); 
+            if(enableInvisibleGuides)
+                phoneme_Conductor.GetComponent<MaterialChanger>().invisibleGuides = false;
             scorecounter.SetActive(true);
             activateTutorial = false;
             text.text = " ";
@@ -152,6 +156,8 @@ public class Conductor : MonoBehaviour
             phoneme_Conductor.GetComponent<GestureConductor>().enabled = false; 
             phoneme_Conductor.GetComponent<MaterialChanger>().taskMode = true;
             phoneme_Conductor.GetComponent<FeedbackChanger>().setFeedbackValue(0.0f);
+            if (enableInvisibleGuides)
+                phoneme_Conductor.GetComponent<MaterialChanger>().invisibleGuides = true;
             phonemePicturePlane.SetActive(true);
             scorecounter.SetActive(true);
             activateTutorial = false;
@@ -180,6 +186,7 @@ public class Conductor : MonoBehaviour
             phoneme_Conductor.SetActive(true);
             menu.SetActive(true);
             menuMode = true; 
+            phoneme_Conductor.GetComponent<MaterialChanger>().invisibleGuides = false;
         }
 
 

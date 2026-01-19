@@ -4,7 +4,8 @@ using UnityEngine.Video;
 
 public class PhonemeDb : MonoBehaviour
 {
-    public string activeLetters = "l l l Â Â Â"; 
+    public string activeLetters = "l l l Â Â Â";
+    public float targetZPos = 0.581f; 
     public VideoClip a;
     private PhonemeVideoClass aClass; 
     public VideoClip b;
@@ -357,6 +358,7 @@ public class PhonemeDb : MonoBehaviour
     public List<PicturePhonemeClass> picturePhonemeList = new List<PicturePhonemeClass>();
 
     // Start is called before the first frame update
+    // old Z pos 0.581f
     void Start()
     {
         aClass = new PhonemeVideoClass(a);
@@ -369,10 +371,10 @@ public class PhonemeDb : MonoBehaviour
         aClass.SetVisibleFromTime(3.25);
         aClass.SetPosShiftTime(6.60);
 
-        aClass.SetLeftHandPos1(new Vector3(0.037f, 1.331f, -0.7251865f));
-        aClass.SetLeftHandPos2(new Vector3(0.496f, 0.899f, -0.7251865f));
-        aClass.SetRightHandPos1(new Vector3(-0.047f, 1.331f, -0.7251865f));
-        aClass.SetRightHandPos2(new Vector3(-0.487f, 0.907f, -0.7251865f));
+        aClass.SetLeftHandPos1(new Vector3(0.037f, 1.331f, targetZPos));
+        aClass.SetLeftHandPos2(new Vector3(0.496f, 0.899f, targetZPos));
+        aClass.SetRightHandPos1(new Vector3(-0.047f, 1.331f, targetZPos));
+        aClass.SetRightHandPos2(new Vector3(-0.487f, 0.907f, targetZPos));
 
         aClass.SetLeftHandAngle1(new Vector3(0f, 0f, 36.939f));
         aClass.SetLeftHandAngle2(new Vector3(0f, 0f, -90.064f));
@@ -392,9 +394,9 @@ public class PhonemeDb : MonoBehaviour
         bClass.SetPosShiftTime(3.2);
         bClass.SetPosShiftTime2(3.85);
 
-        bClass.SetRightHandPos1(new Vector3(0.002f, 0.873f, -0.7251865f));
-        bClass.SetRightHandPos2(new Vector3(-0.006f, 1.263f, -0.7251865f));
-        bClass.SetRightHandPos3(new Vector3(-0.472f, 1.366f, -0.7251865f));
+        bClass.SetRightHandPos1(new Vector3(0.002f, 0.873f, targetZPos));
+        bClass.SetRightHandPos2(new Vector3(-0.006f, 1.263f, targetZPos));
+        bClass.SetRightHandPos3(new Vector3(-0.472f, 1.366f, targetZPos));
 
         bClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         bClass.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -419,11 +421,11 @@ public class PhonemeDb : MonoBehaviour
         dClass.SetPosShiftTime3(9.87);
         dClass.SetPosShiftTime4(10.50);
 
-        dClass.SetLeftHandPos1(new Vector3(-0.0499f, 1.1752f, -0.7251865f));
-        dClass.SetLeftHandPos2(new Vector3(-0.2366f, 1.1868f, -0.7251865f));
-        dClass.SetLeftHandPos3(new Vector3(0.498f, 0.866f, -0.7251865f));
-        dClass.SetLeftHandPos4(new Vector3(0.149f, 1.376f, -0.7251865f));
-        dClass.SetLeftHandPos5(new Vector3(-0.203f, 0.866f, -0.7251865f));
+        dClass.SetLeftHandPos1(new Vector3(-0.0499f, 1.1752f, targetZPos));
+        dClass.SetLeftHandPos2(new Vector3(-0.2366f, 1.1868f, targetZPos));
+        dClass.SetLeftHandPos3(new Vector3(0.498f, 0.866f, targetZPos));
+        dClass.SetLeftHandPos4(new Vector3(0.149f, 1.376f, targetZPos));
+        dClass.SetLeftHandPos5(new Vector3(-0.203f, 0.866f, targetZPos));
 
 
         dClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
@@ -432,11 +434,11 @@ public class PhonemeDb : MonoBehaviour
         dClass.SetLeftHandAngle4(new Vector3(0f, 0f, 90f));
         dClass.SetLeftHandAngle5(new Vector3(0f, 0f, 90f));
 
-        dClass.SetRightHandPos1(new Vector3(-0.0277f, 1.1563f, -0.7251865f));
-        dClass.SetRightHandPos2(new Vector3(-0.2367f, 1.1867f, -0.7251865f));
-        dClass.SetRightHandPos3(new Vector3(0.222f, 0.866f, -0.7242f));
-        dClass.SetRightHandPos4(new Vector3(-0.149f, 1.376f, -0.7242f));
-        dClass.SetRightHandPos5(new Vector3(-0.475f, 0.866f, -0.7242f));
+        dClass.SetRightHandPos1(new Vector3(-0.0277f, 1.1563f, targetZPos));
+        dClass.SetRightHandPos2(new Vector3(-0.2367f, 1.1867f, targetZPos));
+        dClass.SetRightHandPos3(new Vector3(0.222f, 0.866f, targetZPos));
+        dClass.SetRightHandPos4(new Vector3(-0.149f, 1.376f, targetZPos));
+        dClass.SetRightHandPos5(new Vector3(-0.475f, 0.866f, targetZPos));
 
 
         dClass.SetRightHandAngle1(new Vector3(0f, 0f, 90f));
@@ -457,17 +459,17 @@ public class PhonemeDb : MonoBehaviour
         eClass.SetPosShiftTime(5.0);
         eClass.SetPosShiftTime2(7.0);
 
-        eClass.SetLeftHandPos1(new Vector3(0.087f, 1.283f, -0.7251865f));
-        eClass.SetLeftHandPos2(new Vector3(0.243f, 1.161f, -0.7251865f));
-        eClass.SetLeftHandPos3(new Vector3(0.128f, 0.755f, -0.7251865f));
+        eClass.SetLeftHandPos1(new Vector3(0.087f, 1.283f, targetZPos));
+        eClass.SetLeftHandPos2(new Vector3(0.243f, 1.161f, targetZPos));
+        eClass.SetLeftHandPos3(new Vector3(0.128f, 0.755f, targetZPos));
 
         eClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
         eClass.SetLeftHandAngle2(new Vector3(0f, 0f, 90f));
         eClass.SetLeftHandAngle3(new Vector3(0f, 0f, 90f));
 
-        eClass.SetRightHandPos1(new Vector3(-0.085f, 1.283f, -0.725f));
-        eClass.SetRightHandPos2(new Vector3(-0.241f, 1.161f, -0.725f));
-        eClass.SetRightHandPos3(new Vector3(-0.129f, 0.755f, -0.724f));
+        eClass.SetRightHandPos1(new Vector3(-0.085f, 1.283f, targetZPos));
+        eClass.SetRightHandPos2(new Vector3(-0.241f, 1.161f, targetZPos));
+        eClass.SetRightHandPos3(new Vector3(-0.129f, 0.755f, targetZPos));
 
         eClass.SetRightHandAngle1(new Vector3(-0.24f, -0.249f, -90f));
         eClass.SetRightHandAngle2(new Vector3(-0.24f, -0.249f, -90f));
@@ -487,9 +489,9 @@ public class PhonemeDb : MonoBehaviour
         gClass.SetPosShiftTime(3.7);
         gClass.SetPosShiftTime2(4.2);
 
-        gClass.SetLeftHandPos1(new Vector3(0.462f, 0.925f, -0.7251865f));
-        gClass.SetLeftHandPos2(new Vector3(0.072f, 0.658f, -0.7251865f));
-        gClass.SetLeftHandPos3(new Vector3(-0.252f, 0.914f, -0.7251865f));
+        gClass.SetLeftHandPos1(new Vector3(0.462f, 0.925f, targetZPos));
+        gClass.SetLeftHandPos2(new Vector3(0.072f, 0.658f, targetZPos));
+        gClass.SetLeftHandPos3(new Vector3(-0.252f, 0.914f, targetZPos));
 
         gClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
         gClass.SetLeftHandAngle2(new Vector3(0f, 0f, 90f));
@@ -512,17 +514,17 @@ public class PhonemeDb : MonoBehaviour
         iClass.SetPosShiftTime(2.5);
         iClass.SetPosShiftTime2(3.1);
 
-        iClass.SetLeftHandPos1(new Vector3(0.275f, 0.656f, -0.7251865f));
-        iClass.SetLeftHandPos2(new Vector3(0.126f, 0.975f, -0.7251865f));
-        iClass.SetLeftHandPos3(new Vector3(0.144f, 1.615f, -0.7251865f));
+        iClass.SetLeftHandPos1(new Vector3(0.275f, 0.656f, targetZPos));
+        iClass.SetLeftHandPos2(new Vector3(0.126f, 0.975f, targetZPos));
+        iClass.SetLeftHandPos3(new Vector3(0.144f, 1.615f, targetZPos));
 
         iClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         iClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         iClass.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
 
-        iClass.SetRightHandPos1(new Vector3(-0.16f, 0.648f, -0.725f));
-        iClass.SetRightHandPos2(new Vector3(-0.002f, 0.978f, -0.725f));
-        iClass.SetRightHandPos3(new Vector3(-0.017f, 1.616f, -0.724f));
+        iClass.SetRightHandPos1(new Vector3(-0.16f, 0.648f, targetZPos));
+        iClass.SetRightHandPos2(new Vector3(-0.002f, 0.978f, targetZPos));
+        iClass.SetRightHandPos3(new Vector3(-0.017f, 1.616f, targetZPos));
 
         iClass.SetRightHandAngle1(new Vector3(-0f, -0f, -0f));
         iClass.SetRightHandAngle2(new Vector3(0f, -0f, -0f));
@@ -541,13 +543,13 @@ public class PhonemeDb : MonoBehaviour
         kClass.SetVisibleFromTime(3.0);
         kClass.SetPosShiftTime(3.4);
 
-        kClass.SetLeftHandPos1(new Vector3(0.115f, 1.039f, -0.7251865f));
-        kClass.SetLeftHandPos2(new Vector3(0.174f, 0.777f, -0.7251865f));
+        kClass.SetLeftHandPos1(new Vector3(0.115f, 1.039f, targetZPos));
+        kClass.SetLeftHandPos2(new Vector3(0.174f, 0.777f, targetZPos));
         kClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         kClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
 
-        kClass.SetRightHandPos1(new Vector3(-0.12f, 1.044f, -0.7242f));
-        kClass.SetRightHandPos2(new Vector3(-0.182f, 0.779f, -0.7242f));
+        kClass.SetRightHandPos1(new Vector3(-0.12f, 1.044f, targetZPos));
+        kClass.SetRightHandPos2(new Vector3(-0.182f, 0.779f, targetZPos));
         kClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         kClass.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
 
@@ -563,16 +565,16 @@ public class PhonemeDb : MonoBehaviour
         lClass.SetPosShiftTime(4.0);
         lClass.SetPosShiftTime2(4.4);
 
-        lClass.SetLeftHandPos1(new Vector3(0.508f, 0.798f, -0.7251865f));
-        lClass.SetLeftHandPos2(new Vector3(0.096f, 0.854f, -0.7251865f));
-        lClass.SetLeftHandPos3(new Vector3(0.096f, 1.244f, -0.7251865f));
+        lClass.SetLeftHandPos1(new Vector3(0.508f, 0.798f, targetZPos));
+        lClass.SetLeftHandPos2(new Vector3(0.096f, 0.854f, targetZPos));
+        lClass.SetLeftHandPos3(new Vector3(0.096f, 1.244f, targetZPos));
         lClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         lClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         lClass.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
 
-        lClass.SetRightHandPos1(new Vector3(-0.498f, 0.798f, -0.7242f));
-        lClass.SetRightHandPos2(new Vector3(-0.089f, 0.854f, -0.7242f));
-        lClass.SetRightHandPos3(new Vector3(-0.089f, 1.244f, -0.7242f));
+        lClass.SetRightHandPos1(new Vector3(-0.498f, 0.798f, targetZPos));
+        lClass.SetRightHandPos2(new Vector3(-0.089f, 0.854f, targetZPos));
+        lClass.SetRightHandPos3(new Vector3(-0.089f, 1.244f, targetZPos));
         lClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         lClass.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
         lClass.SetRightHandAngle3(new Vector3(0f, 0f, 0f));
@@ -594,11 +596,11 @@ public class PhonemeDb : MonoBehaviour
         mClass.SetPosShiftTime3(3.9);
         mClass.SetPosShiftTime4(4.2);
 
-        mClass.SetRightHandPos1(new Vector3(0.087f, 0.842f, -0.7251865f));
-        mClass.SetRightHandPos2(new Vector3(0.143f, 1.031f, -0.7242f));
-        mClass.SetRightHandPos3(new Vector3(-0.006f, 1.153f, -0.7242f));
-        mClass.SetRightHandPos4(new Vector3(-0.127f, 0.965f, -0.7251865f));
-        mClass.SetRightHandPos5(new Vector3(0.001f, 0.842f, -0.7242f));
+        mClass.SetRightHandPos1(new Vector3(0.087f, 0.842f, targetZPos));
+        mClass.SetRightHandPos2(new Vector3(0.143f, 1.031f, targetZPos));
+        mClass.SetRightHandPos3(new Vector3(-0.006f, 1.153f, targetZPos));
+        mClass.SetRightHandPos4(new Vector3(-0.127f, 0.965f, targetZPos));
+        mClass.SetRightHandPos5(new Vector3(0.001f, 0.842f, targetZPos));
 
         mClass.SetRightHandAngle1(new Vector3(0f, 0f, 90f));
         mClass.SetRightHandAngle2(new Vector3(0f, 0f, 90f));
@@ -614,7 +616,7 @@ public class PhonemeDb : MonoBehaviour
         nClass.SetNoOfPos(1);
         nClass.SetVisibleFromTime(3.20);
 
-        nClass.SetRightHandPos1(new Vector3(0.01f, 1.242f, -0.7251865f));
+        nClass.SetRightHandPos1(new Vector3(0.01f, 1.242f, targetZPos));
 
         nClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
 
@@ -632,10 +634,10 @@ public class PhonemeDb : MonoBehaviour
         oClass.SetPosShiftTime2(4.15);
         oClass.SetPosShiftTime3(6.10);
 
-        oClass.SetLeftHandPos1(new Vector3(-0.182f, 0.768f, -0.7251865f));
-        oClass.SetLeftHandPos2(new Vector3(0.149f, 1.376f, -0.7251865f));
-        oClass.SetLeftHandPos3(new Vector3(0.283f, 0.672f, -0.7251865f));
-        oClass.SetLeftHandPos4(new Vector3(0.333f, 1.345f, -0.7251865f));
+        oClass.SetLeftHandPos1(new Vector3(-0.182f, 0.768f, targetZPos));
+        oClass.SetLeftHandPos2(new Vector3(0.149f, 1.376f, targetZPos));
+        oClass.SetLeftHandPos3(new Vector3(0.283f, 0.672f, targetZPos));
+        oClass.SetLeftHandPos4(new Vector3(0.333f, 1.345f, targetZPos));
 
         oClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
         oClass.SetLeftHandAngle2(new Vector3(0f, 0f, 90f));
@@ -643,10 +645,10 @@ public class PhonemeDb : MonoBehaviour
         oClass.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
 
-        oClass.SetRightHandPos1(new Vector3(-0.451f, 0.773f, -0.7242f));
-        oClass.SetRightHandPos2(new Vector3(-0.149f, 1.376f, -0.7242f));
-        oClass.SetRightHandPos3(new Vector3(0.226f, 0.784f, -0.7242f));
-        oClass.SetRightHandPos4(new Vector3(-0.348f, 1.357f, -0.7242f));
+        oClass.SetRightHandPos1(new Vector3(-0.451f, 0.773f, targetZPos));
+        oClass.SetRightHandPos2(new Vector3(-0.149f, 1.376f, targetZPos));
+        oClass.SetRightHandPos3(new Vector3(0.226f, 0.784f, targetZPos));
+        oClass.SetRightHandPos4(new Vector3(-0.348f, 1.357f, targetZPos));
 
         oClass.SetRightHandAngle1(new Vector3(0f, 0f, 90f));
         oClass.SetRightHandAngle2(new Vector3(0f, 0f, 90f));
@@ -672,20 +674,20 @@ public class PhonemeDb : MonoBehaviour
         rClass.SetPosShiftTime2(5.10);
         rClass.SetPosShiftTime3(5.58);
 
-        rClass.SetLeftHandPos1(new Vector3(0.335f, 1.232f, -0.7251865f));
-        rClass.SetLeftHandPos2(new Vector3(0.354f, 0.84f, -0.7251865f));
-        rClass.SetLeftHandPos3(new Vector3(0.365f, 1.269f, -0.7251865f));
-        rClass.SetLeftHandPos4(new Vector3(0.365f, 1.198f, -0.7251865f));
+        rClass.SetLeftHandPos1(new Vector3(0.335f, 1.232f, targetZPos));
+        rClass.SetLeftHandPos2(new Vector3(0.354f, 0.84f, targetZPos));
+        rClass.SetLeftHandPos3(new Vector3(0.365f, 1.269f, targetZPos));
+        rClass.SetLeftHandPos4(new Vector3(0.365f, 1.198f, targetZPos));
 
         rClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         rClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         rClass.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
         rClass.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
-        rClass.SetRightHandPos1(new Vector3(-0.213f, 1.215f, -0.725f));
-        rClass.SetRightHandPos2(new Vector3(-0.247f, 0.851f, -0.725f));
-        rClass.SetRightHandPos3(new Vector3(-0.236f, 1.272f, -0.724f));
-        rClass.SetRightHandPos4(new Vector3(-0.236f, 1.201f, -0.724f));
+        rClass.SetRightHandPos1(new Vector3(-0.213f, 1.215f, targetZPos));
+        rClass.SetRightHandPos2(new Vector3(-0.247f, 0.851f, targetZPos));
+        rClass.SetRightHandPos3(new Vector3(-0.236f, 1.272f, targetZPos));
+        rClass.SetRightHandPos4(new Vector3(-0.236f, 1.201f, targetZPos));
 
         rClass.SetRightHandAngle1(new Vector3(-0f, -0f, -0f));
         rClass.SetRightHandAngle2(new Vector3(0f, -0f, -0f));
@@ -707,9 +709,9 @@ public class PhonemeDb : MonoBehaviour
         sClass.SetLeftHandPos2(new Vector3(0.0f, -0.5f, 0.0f));
         sClass.SetLeftHandPos3(new Vector3(0.0f, -0.5f, 0.0f));
 
-        sClass.SetRightHandPos1(new Vector3(-0.379f, 1.371f, -0.7251865f));
-        sClass.SetRightHandPos2(new Vector3(0.174f, 0.9739f, -0.72518f));
-        sClass.SetRightHandPos3(new Vector3(0.4f, 1.154f, -0.7251865f));
+        sClass.SetRightHandPos1(new Vector3(-0.379f, 1.371f, targetZPos));
+        sClass.SetRightHandPos2(new Vector3(0.174f, 0.9739f, targetZPos));
+        sClass.SetRightHandPos3(new Vector3(0.4f, 1.154f, targetZPos));
 
         sClass.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
         sClass.SetLeftHandAngle2(new Vector3(0f, 0f, 90));
@@ -727,17 +729,17 @@ public class PhonemeDb : MonoBehaviour
         tClass.SetPosShiftTime(3.05);
         tClass.SetPosShiftTime2(3.45);
 
-        tClass.SetLeftHandPos1(new Vector3(0.268f, 0.91f, -0.7251865f));
-        tClass.SetLeftHandPos2(new Vector3(0.268f, 1.37f, -0.7251865f));
-        tClass.SetLeftHandPos3(new Vector3(0.32f, 0.78f, -0.7251865f));
+        tClass.SetLeftHandPos1(new Vector3(0.268f, 0.91f, targetZPos));
+        tClass.SetLeftHandPos2(new Vector3(0.268f, 1.37f, targetZPos));
+        tClass.SetLeftHandPos3(new Vector3(0.32f, 0.78f, targetZPos));
 
         tClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         tClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         tClass.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
 
-        tClass.SetRightHandPos1(new Vector3(-0.257f, 0.91f, -0.725f));
-        tClass.SetRightHandPos2(new Vector3(-0.257f, 1.37f, -0.725f));
-        tClass.SetRightHandPos3(new Vector3(-0.31f, 0.78f, -0.724f));
+        tClass.SetRightHandPos1(new Vector3(-0.257f, 0.91f, targetZPos));
+        tClass.SetRightHandPos2(new Vector3(-0.257f, 1.37f, targetZPos));
+        tClass.SetRightHandPos3(new Vector3(-0.31f, 0.78f, targetZPos));
 
         tClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         tClass.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -758,20 +760,20 @@ public class PhonemeDb : MonoBehaviour
         uLyd1Class.SetPosShiftTime2(3.30);
         uLyd1Class.SetPosShiftTime3(3.93);
 
-        uLyd1Class.SetLeftHandPos1(new Vector3(0.095f, 0.803f, -0.7251865f));
-        uLyd1Class.SetLeftHandPos2(new Vector3(0.259f, 0.686f, -0.7251865f));
-        uLyd1Class.SetLeftHandPos3(new Vector3(0.548f, 0.916f, -0.7251865f));
-        uLyd1Class.SetLeftHandPos4(new Vector3(0.433f, 1.391f, -0.7251865f));
+        uLyd1Class.SetLeftHandPos1(new Vector3(0.095f, 0.803f, targetZPos));
+        uLyd1Class.SetLeftHandPos2(new Vector3(0.259f, 0.686f, targetZPos));
+        uLyd1Class.SetLeftHandPos3(new Vector3(0.548f, 0.916f, targetZPos));
+        uLyd1Class.SetLeftHandPos4(new Vector3(0.433f, 1.391f, targetZPos));
 
         uLyd1Class.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         uLyd1Class.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         uLyd1Class.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
         uLyd1Class.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
-        uLyd1Class.SetRightHandPos1(new Vector3(0.016f, 0.802f, -0.725f));
-        uLyd1Class.SetRightHandPos2(new Vector3(-0.16f, 0.686f, -0.725f));
-        uLyd1Class.SetRightHandPos3(new Vector3(-0.411f, 0.908f, -0.724f));
-        uLyd1Class.SetRightHandPos4(new Vector3(-0.332f, 1.394f, -0.724f));
+        uLyd1Class.SetRightHandPos1(new Vector3(0.016f, 0.802f, targetZPos));
+        uLyd1Class.SetRightHandPos2(new Vector3(-0.16f, 0.686f, targetZPos));
+        uLyd1Class.SetRightHandPos3(new Vector3(-0.411f, 0.908f, targetZPos));
+        uLyd1Class.SetRightHandPos4(new Vector3(-0.332f, 1.394f, targetZPos));
 
         uLyd1Class.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         uLyd1Class.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -793,20 +795,20 @@ public class PhonemeDb : MonoBehaviour
         uLyd2Class.SetPosShiftTime2(4.44);
         uLyd2Class.SetPosShiftTime3(5.00);
 
-        uLyd2Class.SetLeftHandPos1(new Vector3(0.1219f, 1.528f, -0.7251865f));
-        uLyd2Class.SetLeftHandPos2(new Vector3(0.049f, 1.528f, -0.7251865f));
-        uLyd2Class.SetLeftHandPos3(new Vector3(0.1219f, 1.528f, -0.7251865f));
-        uLyd2Class.SetLeftHandPos4(new Vector3(0.049f, 1.528f, -0.7251865f));
+        uLyd2Class.SetLeftHandPos1(new Vector3(0.1219f, 1.528f, targetZPos));
+        uLyd2Class.SetLeftHandPos2(new Vector3(0.049f, 1.528f, targetZPos));
+        uLyd2Class.SetLeftHandPos3(new Vector3(0.1219f, 1.528f, targetZPos));
+        uLyd2Class.SetLeftHandPos4(new Vector3(0.049f, 1.528f, targetZPos));
 
         uLyd2Class.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         uLyd2Class.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         uLyd2Class.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
         uLyd2Class.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
-        uLyd2Class.SetRightHandPos1(new Vector3(-0.126f, 1.528f, -0.725f));
-        uLyd2Class.SetRightHandPos2(new Vector3(-0.056f, 1.528f, -0.725f));
-        uLyd2Class.SetRightHandPos3(new Vector3(-0.126f, 1.528f, -0.724f));
-        uLyd2Class.SetRightHandPos4(new Vector3(-0.056f, 1.528f, -0.724f));
+        uLyd2Class.SetRightHandPos1(new Vector3(-0.126f, 1.528f, targetZPos));
+        uLyd2Class.SetRightHandPos2(new Vector3(-0.056f, 1.528f, targetZPos));
+        uLyd2Class.SetRightHandPos3(new Vector3(-0.126f, 1.528f, targetZPos));
+        uLyd2Class.SetRightHandPos4(new Vector3(-0.056f, 1.528f, targetZPos));
 
         uLyd2Class.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         uLyd2Class.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -824,14 +826,14 @@ public class PhonemeDb : MonoBehaviour
         vLyd1Class.SetVisibleFromTime(2.00);
         vLyd1Class.SetPosShiftTime(2.92);
 
-        vLyd1Class.SetLeftHandPos1(new Vector3(0.433f, 1.391f, -0.7251865f));
-        vLyd1Class.SetLeftHandPos2(new Vector3(0.057f, 0.818f, -0.7251865f));
+        vLyd1Class.SetLeftHandPos1(new Vector3(0.433f, 1.391f, targetZPos));
+        vLyd1Class.SetLeftHandPos2(new Vector3(0.057f, 0.818f, targetZPos));
 
         vLyd1Class.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         vLyd1Class.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
 
-        vLyd1Class.SetRightHandPos1(new Vector3(-0.332f, 1.394f, -0.725f));
-        vLyd1Class.SetRightHandPos2(new Vector3(-0.03f, 0.82f, -0.725f));
+        vLyd1Class.SetRightHandPos1(new Vector3(-0.332f, 1.394f, targetZPos));
+        vLyd1Class.SetRightHandPos2(new Vector3(-0.03f, 0.82f, targetZPos));
 
         vLyd1Class.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         vLyd1Class.SetRightHandAngle2(new Vector3(0f, 0f, 0f));
@@ -880,9 +882,9 @@ public class PhonemeDb : MonoBehaviour
         yClass.SetNoOfPos(1);
         yClass.SetVisibleFromTime(3.80);
 
-        yClass.SetLeftHandPos1(new Vector3(0.455f, 1.534f, -0.7251865f));
+        yClass.SetLeftHandPos1(new Vector3(0.455f, 1.534f, targetZPos));
         yClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
-        yClass.SetRightHandPos1(new Vector3(-0.36f, 1.53f, -0.725f));
+        yClass.SetRightHandPos1(new Vector3(-0.36f, 1.53f, targetZPos));
         yClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
 
         ÊClass = new PhonemeVideoClass(Ê);
@@ -896,9 +898,9 @@ public class PhonemeDb : MonoBehaviour
         ¯Class.SetPos1ReadyToHit(true);
         ¯Class.SetNoOfPos(1);
         ¯Class.SetVisibleFromTime(4.30);
-        ¯Class.SetLeftHandPos1(new Vector3(0.16f, 1.355f, -0.7251865f));
+        ¯Class.SetLeftHandPos1(new Vector3(0.16f, 1.355f, targetZPos));
         ¯Class.SetLeftHandAngle1(new Vector3(0f, 0f, 90f));
-        ¯Class.SetRightHandPos1(new Vector3(-0.028f, 1.356f, -0.725f));
+        ¯Class.SetRightHandPos1(new Vector3(-0.028f, 1.356f, targetZPos));
         ¯Class.SetRightHandAngle1(new Vector3(0f, 0f, 90f));
 
         ÂClass = new PhonemeVideoClass(Â);
@@ -915,20 +917,20 @@ public class PhonemeDb : MonoBehaviour
         ÂClass.SetPosShiftTime2(4.07);
         ÂClass.SetPosShiftTime3(4.75);
 
-        ÂClass.SetLeftHandPos1(new Vector3(0.1219f, 1.528f, -0.7251865f));
-        ÂClass.SetLeftHandPos2(new Vector3(0.049f, 1.528f, -0.7251865f));
-        ÂClass.SetLeftHandPos3(new Vector3(0.1219f, 1.528f, -0.7251865f));
-        ÂClass.SetLeftHandPos4(new Vector3(0.049f, 1.528f, -0.7251865f));
+        ÂClass.SetLeftHandPos1(new Vector3(0.1219f, 1.528f, targetZPos));
+        ÂClass.SetLeftHandPos2(new Vector3(0.049f, 1.528f, targetZPos));
+        ÂClass.SetLeftHandPos3(new Vector3(0.1219f, 1.528f, targetZPos));
+        ÂClass.SetLeftHandPos4(new Vector3(0.049f, 1.528f, targetZPos));
 
         ÂClass.SetLeftHandAngle1(new Vector3(0f, 0f, 0f));
         ÂClass.SetLeftHandAngle2(new Vector3(0f, 0f, 0f));
         ÂClass.SetLeftHandAngle3(new Vector3(0f, 0f, 0f));
         ÂClass.SetLeftHandAngle4(new Vector3(0f, 0f, 0f));
 
-        ÂClass.SetRightHandPos1(new Vector3(-0.126f, 1.528f, -0.725f));
-        ÂClass.SetRightHandPos2(new Vector3(-0.056f, 1.528f, -0.725f));
-        ÂClass.SetRightHandPos3(new Vector3(-0.126f, 1.528f, -0.724f));
-        ÂClass.SetRightHandPos4(new Vector3(-0.056f, 1.528f, -0.724f));
+        ÂClass.SetRightHandPos1(new Vector3(-0.126f, 1.528f, targetZPos));
+        ÂClass.SetRightHandPos2(new Vector3(-0.056f, 1.528f, targetZPos));
+        ÂClass.SetRightHandPos3(new Vector3(-0.126f, 1.528f, targetZPos));
+        ÂClass.SetRightHandPos4(new Vector3(-0.056f, 1.528f, targetZPos));
 
         ÂClass.SetRightHandAngle1(new Vector3(0f, 0f, 0f));
         ÂClass.SetRightHandAngle2(new Vector3(0f, 0f, 0f));

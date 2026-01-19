@@ -1618,9 +1618,12 @@ MonoBehaviour:
   leftOutlineCube5: {fileID: 1732882845}
   rightOutlineCube5: {fileID: 1929934894}
   phonemeVideoPlane: {fileID: 1657768937}
+  leftGuide: {fileID: 1464591559}
+  rightGuide: {fileID: 1686690772}
   tutorialMode: 0
   taskMode: 0
   calibrationMode: 0
+  invisibleGuides: 0
 --- !u!114 &93277122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24415,7 +24418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b91f45fcb4f6bd842af97196d88a5b51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28483,7 +28486,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b91f45fcb4f6bd842af97196d88a5b51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28618,6 +28621,7 @@ MonoBehaviour:
   caliStar: {fileID: 2040206120}
   tutStar: {fileID: 1978993127}
   taskStar: {fileID: 1562157982}
+  enableInvisibleGuides: 0
 --- !u!1 &1691512018
 GameObject:
   m_ObjectHideFlags: 0
